@@ -13,6 +13,37 @@
 3. **После каждого DR:** декомпозиция в папке DR (`wiki/08_декомпозиция_после_DR.md`) → ingest в wiki + `log.md`.
 4. **Этапы 4+** — только после ✅ **2a** и **3a** (см. `wiki/01_этапы_дорожная_карта.md`).
 5. **Skills** — повторяемые этапы: `wiki/09_skills_реестр.md`, вызов `используй skill <name>`.
+6. **Firecrawl MCP** — верификация URL, scrape источников для DR (см. ниже).
+
+---
+
+## Firecrawl MCP
+
+Веб-скрейпинг и проверка источников через [Firecrawl MCP](https://docs.firecrawl.dev/mcp-server).
+
+**Установка (один раз):**
+
+1. Получить ключ: https://firecrawl.dev/app/api-keys  
+2. Из корня workspace (папка «Дипломная работа ДПО МГИМО»):
+
+```bash
+# вариант A: интерактивно
+bash диплом_СТМ_автомасла/.cursor/setup-firecrawl-mcp.sh
+
+# вариант B: из переменной окружения
+export FIRECRAWL_API_KEY=fc-ваш_ключ
+bash диплом_СТМ_автомасла/.cursor/setup-firecrawl-mcp.sh
+```
+
+3. **Cursor → Settings → Tools & MCP** — сервер `firecrawl` с зелёной точкой.  
+4. При необходимости перезапустить Cursor.
+
+**Шаблон без ключа:** `../.cursor/mcp.json.example` (в git).  
+**Файл с ключом:** `../../.cursor/mcp.json` (workspace) — **не коммитить**.
+
+**Когда использовать в дипломе:** проверка URL из `wiki/04_источники_и_URL.md`, scrape страниц для декомпозиции DR (2a/3a), поиск открытых данных по брендам/SAE.
+
+**Альтернатива (нужен Node.js 22+):** см. комментарий в `mcp.json.example` — локальный `npx firecrawl-mcp`.
 
 ---
 

@@ -41,6 +41,9 @@
 | 16 | Kolesa / Nielsen | kolesa.ru/…rastush**h**em… | ✅ | https://www.kolesa.ru/news/na-rastushhem-rynke-motornyx-masel-v-rf-liderstvo-prodolzaiut-uderzivat-rossiiskie-brendy | NL-01 |
 | 17 | LIQUI MOLY пресс | 800 млн sales PR | 🔴 не уход из РФ | https://www.liqui-moly.com/en/us/company/about-us/company-history.html | LM-02 |
 | 18 | Коммерсантъ MZD | kommersant.ru/doc/7713657 | ✅ | https://www.kommersant.ru/doc/7713657 | KM-01 |
+| 19 | Autonews / ЦРПТ — 81% отечеств. масла+жидкости | — (добавлено 16.06.2026) | ✅ | https://www.autonews.ru/news/69b159ea9a7947d9d5b8eb61 | **CZ-01** |
+
+**CZ-01:** доля **отечественного vs импортного** предложения по данным маркировки (масла **+** автожидкости, **единицы SKU**), **не** brand share и **не** литры. Tier 2 (РБК Autonews → пресс-служба ЦРПТ).
 
 ---
 
@@ -126,6 +129,7 @@ https://sintecgroup.ru/news/sintec_lubricants_postavila_svyshe_500_tysyach_litro
 https://www.kolesa.ru/news/na-rastushhem-rynke-motornyx-masel-v-rf-liderstvo-prodolzaiut-uderzivat-rossiiskie-brendy
 https://www.liqui-moly.com/en/us/company/about-us/company-history.html
 https://www.kommersant.ru/doc/7713657
+https://www.autonews.ru/news/69b159ea9a7947d9d5b8eb61
 ```
 
 **Не внесено в блок:** отдельный URL «континенты 71%/46%» — в экспорте ChatGPT не найден (ошибочно 54390).

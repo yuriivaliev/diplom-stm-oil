@@ -21,7 +21,7 @@
 
 | Статус | Кол-во | Действие |
 |--------|--------|----------|
-| ✅ Использовать в дипломе | 12 | URL + tier в сноске |
+| ✅ Использовать в дипломе | 13 | URL + tier в сноске |
 | 🟡 Открыть вручную в браузере | 5 | Блокировка ботов / таймаут |
 | 🔴 Заменить / убрать | 4 | См. таблицу исправлений |
 | ⛔ Не использовать | 2 | Битая ссылка / неверная тема |
@@ -46,12 +46,13 @@
 | **TO-01** | TotalEnergies — Russia | https://totalenergies.com/newsroom/russia-totalenergies-shares-its-principles-conduct/?lang=eng | 200 | ✅ | 1 | |
 | **MO-01** | Motul Russia | https://mymotul.ru/ | 200 | ✅ канал | 3 | Убрать `?srsltid=…` из сноски |
 | **STM-01** | SINTEC — AGR 500 тыс л | https://sintecgroup.ru/news/sintec_lubricants_postavila_svyshe_500_tysyach_litrov_avtomasel_pod_brendom_agr/ | 200 | ✅ | 1 | СТМ кейс |
-| **NL-01** | Kolesa.ru — Nielsen | https://www.kolesa.ru/news/na-rastushhem-rynke-motornyx-masel-v-rf-liderstvo-prodolzaiut-uderzivat-rossiiskie-brendy | 200 | ✅ синтетика ~60%, топ-5 | 3 | Вторичный пересказ Nielsen |
+| **NL-01** | Kolesa.ru — Nielsen | https://www.kolesa.ru/news/na-rastushhem-rynke-motornyx-masel-v-rf-liderstvo-prodolzaiut-uderzivat-rossiiskie-brendy | 200 | ✅ синтетика ~60%; ТОП‑5 синт.: LUKOIL 1-й; +2% кат. | 3 | 06.2024–05.2025; пересказ Nielsen |
 | **LM-02** | LIQUI MOLY — stop Russia | https://www.liqui-moly.com/en/us/company/about-us/company-history.html | 200 | ✅ «stopped business with Russia» | 1 | **Заменяет** LM-01 |
 | **KM-01** | Коммерсантъ — MZD | https://www.kommersant.ru/doc/7713657 | 200 | ✅ Mazda / MZD | 2 | СТМ кейс |
 | **MK-04** | ЦРПТ — инструкция маркировки ТГ | https://docs.crpt.ru/gismt/%D0%98%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D1%8F_%D0%BF%D0%BE_%D0%BC%D0%B0%D1%80%D0%BA%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B5_%D1%82%D0%B3_%D0%B0%D0%B2%D1%82%D0%BE%D0%B7%D0%B0%D0%BF%D1%87%D0%B0%D1%81%D1%82%D0%B8/ | 200 | ✅ нормативный контур | 1 | Вместо битых crpt.ru/news |
 | **MK-05** | Честный знак — раздел (браузер) | https://честныйзнак.рф/business/projects/autofluids/marking/ | 🟡 | ✅ сроки маркировки | 1 | DDoS-Guard у ботов; открыть вручную |
 | **CTX-01** | Mordor Intelligence | https://www.mordorintelligence.com/ru/industry-reports/russia-automotive-engine-oils-market | 🟡 403 | контекст 470 млн л | 3 | Cloudflare; только с оговоркой «оценка из отчёта» |
+| **CZ-01** | Autonews.ru — ЦРПТ, 81% отечеств. | https://www.autonews.ru/news/69b159ea9a7947d9d5b8eb61 | 200* | ✅ 81% РФ / 19% импорт; 140+34 млн ед. | 2 | WebFetch 16.06.2026; масла+жидкости; не brand share |
 
 \* AS-04 подтверждён через WebFetch; скрипт давал timeout.
 
@@ -120,6 +121,7 @@ AS-02 (континенты 2021–2022): URL = _________  ← из ChatGPT turn
 | 13 Коммерсантъ MZD | KM-01 |
 | 14 SINTEC AGR | STM-01 |
 | 15 Парк ФО | AS-04 |
+| 16 ЦРПТ 81% отечеств. (Autonews) | **CZ-01** |
 
 ---
 

@@ -1,3 +1,6 @@
 .DS_Store
 *.docx~
 ~$*
+
+# MCP: ключ Firecrawl только локально
+.cursor/mcp.json
