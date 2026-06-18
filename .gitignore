@@ -2,5 +2,10 @@
 *.docx~
 ~$*
 
+# Python virtual environment
+venv/
+.venv/
+__pycache__/
+
 # MCP: ключ Firecrawl только локально
 .cursor/mcp.json
