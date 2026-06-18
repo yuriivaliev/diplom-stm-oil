@@ -2,11 +2,6 @@
 *.docx~
 ~$*
 
-# Python virtual environment
-venv/
-.venv/
-__pycache__/
-03_PGMM_ODSA_упаковка_конкуренты/venv/
-
 # MCP: ключ Firecrawl только локально
 .cursor/mcp.json
+venv/
