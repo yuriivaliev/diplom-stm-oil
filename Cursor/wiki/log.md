@@ -15,6 +15,7 @@
 | 27.05.2026 | Фиксация этапов 0–3 ✅ | 01, overview | `журнал_проекта.md` |
 | 19.06.2026 | Ingest PGMM-анализ упаковки Лукойл Люкс 5W-40 | 10, index | Чат с пользователем |
 | 19.06.2026 | Ingest PGMM-анализ упаковки Gazpromneft Premium N 5W-40 | 11_PGMM_Gazpromneft_Premium_N_5W-40, index | Чат с пользователем |
+| 19.06.2026 | Шаблон промпта PGMM Delta + README в `03_PGMM_ODSA_упаковка_конкуренты/` | log, 07 | пользователь |
 
 ---
 
@@ -31,4 +32,7 @@
 - После этапа **4 (PGMM+ODSA):** новая страница `08_PGMM_упаковка.md` + index.
 - После `literature_и_источники.md` sync → правка `04_источники_и_URL.md`.
 
-*   **2026-06-19:** Добавлен отчет по анализу упаковки конкурента Mobil Super 3000 x1 5W-40 (PGMM). Файл: `12_PGMM_mobil_super_3000_x1_5w_40.md`.
+| 19.06.2026 | Ingest PGMM delta LUKOIL LUXE 5W-40 (1L vs 4L) | 14, index | Чат с пользователем, изображение 1L |
+| 19.06.2026 | Ingest PGMM delta Mobil Super 3000 x1 5W-40 (1L vs 4L) | 13, index | Чат с пользователем, изображение 1L |
+| 19.06.2026 | Ingest PGMM full Mobil Super 3000 x1 5W-40 (4L) | 12, index | Чат с пользователем |
+| 19.06.2026 | Ingest PGMM delta Gazpromneft Premium N 5W-40 (1L vs 4L) | 15, index | Чат с пользователем, изображение 1L |

@@ -4,4 +4,7 @@
 
 # MCP: ключ Firecrawl только локально
 .cursor/mcp.json
+
+# Python venv (локально)
 venv/
+**/venv/
