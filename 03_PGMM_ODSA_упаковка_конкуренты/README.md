@@ -34,6 +34,20 @@ Delta PGMM (другой формат того же SKU)
 
 ---
 
+## MCP (Firecrawl)
+
+Конфиг: `../.cursor/mcp.json` (ключ локально, не в git).  
+Симлинк: `.cursor/mcp.json` → `../../.cursor/mcp.json` (не `../` — иначе циклическая ссылка).
+
+**Формат:** `https://mcp.firecrawl.dev/{fc-ключ}/v2/mcp` (обновлено 23.06.2026).
+
+**Локальный Agent:** Settings → **Tools & MCP** (не Cloud) → Refresh / Reload Window.  
+**Cloud Agent:** Settings → **Cloud** → Add Custom MCP → JSON из `../.cursor/mcp.cloud.example.json`.
+
+Ключ: https://www.firecrawl.dev/app/api-keys
+
+---
+
 ## Скрипты
 
 | Скрипт | Назначение |
@@ -49,4 +63,14 @@ Delta PGMM (другой формат того же SKU)
 | 10 | LUKOIL LUXE 5W-40 | full |
 | 11 | Gazpromneft Premium N 5W-40 | full |
 | 12 | Mobil Super 3000 x1 5W-40 | full (4L) |
-| 13 | Mobil Super 3000 x1 5W-40 | delta 1L — ⏳ ожидает прогон |
+| 13 | Mobil Super 3000 x1 5W-40 | delta 1L |
+| 14 | LUKOIL LUXE 5W-40 | delta 1L |
+| 15 | Gazpromneft Premium N 5W-40 | delta 1L |
+
+### ODSA (claims audit)
+
+| ID | Бренд | Формат | Статус |
+|----|-------|--------|--------|
+| 16 | LUKOIL LUXE 5W-40 | 4L | ✅ |
+| 17 | Gazpromneft Premium N 5W-40 | 4L | ✅ |
+| 18 | Mobil Super 3000 x1 5W-40 | 4L | ✅ |

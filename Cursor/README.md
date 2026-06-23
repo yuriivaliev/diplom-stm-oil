@@ -23,7 +23,7 @@
 
 **Установка (один раз):**
 
-1. Получить ключ: https://firecrawl.dev/app/api-keys  
+1. Получить ключ: https://www.firecrawl.dev/app/api-keys  
 2. Из корня workspace (папка «Дипломная работа ДПО МГИМО»):
 
 ```bash
@@ -35,13 +35,25 @@ export FIRECRAWL_API_KEY=fc-ваш_ключ
 bash диплом_СТМ_автомасла/.cursor/setup-firecrawl-mcp.sh
 ```
 
-3. **Cursor → Settings → Tools & MCP** — сервер `firecrawl` с зелёной точкой.  
-4. При необходимости перезапустить Cursor.
+3. **Cursor → Settings → Tools & MCP** (локально, не вкладка Cloud) — сервер `firecrawl` с зелёной точкой.  
+4. **Developer: Reload Window** после правки `mcp.json`.
+
+**Формат (актуальный):** `https://mcp.firecrawl.dev/{fc-ключ}/v2/mcp` — см. [Firecrawl MCP docs](https://docs.firecrawl.dev/mcp-server).
 
 **Шаблон без ключа:** `../.cursor/mcp.json.example` (в git).  
-**Файл с ключом:** `../../.cursor/mcp.json` (workspace) — **не коммитить**.
+**Файл с ключом:** `../../.cursor/mcp.json` + симлинк в `03_PGMM_…/.cursor/mcp.json` — **не коммитить**.
 
-**Когда использовать в дипломе:** проверка URL из `wiki/04_источники_и_URL.md`, scrape страниц для декомпозиции DR (2a/3a), поиск открытых данных по брендам/SAE.
+**Cloud Agent:** локальный `mcp.json` не подхватывается. В **Settings → Cloud → Add Custom MCP** вставить JSON из `../.cursor/mcp.cloud.example.json` (подставить ключ).
+
+**Troubleshooting (23.06.2026):**
+
+| Симптом | Причина | Fix |
+|---------|---------|-----|
+| Workspace MCP пуст | Симлинк `../.cursor/mcp.json` из `03_…/.cursor/` → **цикл** | `../../.cursor/mcp.json` (скрипт setup создаёт) |
+| Home MCP пуст | `~/.cursor/mcp.json` был `{}` | setup копирует конфиг в Home |
+| Firecrawl Error | Старый Bearer-формат | URL: `https://mcp.firecrawl.dev/{fc-ключ}/v2/mcp` |
+
+**Когда использовать в дипломе:** проверка URL из `wiki/04_источники_и_URL.md`, scrape страниц для декомпозиции DR (2a/3a). **GPN-01:** сайт блокирует bot/curl — для ODSA использовать operator screenshot (ART-005) или browser MCP.
 
 **Альтернатива (нужен Node.js 22+):** см. комментарий в `mcp.json.example` — локальный `npx firecrawl-mcp`.
 

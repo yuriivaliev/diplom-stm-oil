@@ -1,6 +1,6 @@
 # Wiki Index — диплом СТМ автомасла
 
-**Обновлено:** 27.05.2026 · **Всего страниц:** 11 + log + overview
+**Обновлено:** 23.06.2026 · **Всего страниц:** 18 + log + overview
 
 > **Сейчас:** отчёты DR-A/B ✅ · декомпозиция **2a → 3a** ✅ · этапы **4–7** (PGMM, название, синтез) 🟡
 
@@ -23,7 +23,15 @@
 | 07 | [07_этапы_4-7_впереди.md](07_этапы_4-7_впереди.md) | PGMM, название, дизайн, синтез | ⚪ после 2a+3a |
 | 08 | [08_декомпозиция_после_DR.md](08_декомпозиция_после_DR.md) | DR → декомпозиция → wiki; чеклисты | ✅ |
 | 09 | [09_skills_реестр.md](09_skills_реестр.md) | Cursor Skills — что создавать и как запускать | ✅ |
-| 10 | [10_PGMM_LUKOIL_LUXE.md](10_PGMM_LUKOIL_LUXE.md) | Анализ упаковки Лукойл Люкс 5W-40 по протоколу PGMM | ✅ |
+| 10 | [10_PGMM_LUKOIL_LUXE_5W-40.md](10_PGMM_LUKOIL_LUXE_5W-40.md) | PGMM full LUKOIL LUXE 5W-40 4L | ✅ |
+| 11 | [11_PGMM_Gazpromneft_Premium_N_5W-40.md](11_PGMM_Gazpromneft_Premium_N_5W-40.md) | PGMM full Gazpromneft 5W-40 | ✅ |
+| 12 | [12_PGMM_mobil_super_3000_x1_5w_40.md](12_PGMM_mobil_super_3000_x1_5w_40.md) | PGMM full Mobil Super 3000 5W-40 4L | ✅ |
+| 13 | [13_PGMM_mobil_super_3000_x1_5w_40_1L_delta.md](13_PGMM_mobil_super_3000_x1_5w_40_1L_delta.md) | PGMM delta Mobil 1L | ✅ |
+| 14 | [14_PGMM_LUKOIL_LUXE_5W-40_5w_40_1L_delta.md](14_PGMM_LUKOIL_LUXE_5W-40_5w_40_1L_delta.md) | PGMM delta LUKOIL 1L | ✅ |
+| 15 | [15_PGMM_Gazpromneft_Premium_N_5W-40_1L_delta.md](15_PGMM_Gazpromneft_Premium_N_5W-40_1L_delta.md) | PGMM delta Gazpromneft 1L | ✅ |
+| 16 | [16_ODSA_LUKOIL_LUXE_5W-40_4L.md](16_ODSA_LUKOIL_LUXE_5W-40_4L.md) | ODSA claims LUKOIL LUXE 5W-40 4L | ✅ |
+| 17 | [17_ODSA_Gazpromneft_Premium_N_5W-40_4L.md](17_ODSA_Gazpromneft_Premium_N_5W-40_4L.md) | ODSA claims Gazpromneft Premium N 5W-40 4L | ✅ |
+| 18 | [18_ODSA_mobil_super_3000_x1_5w_40_4L.md](18_ODSA_mobil_super_3000_x1_5w_40_4L.md) | ODSA claims Mobil Super 3000 x1 5W-40 4L | ✅ |
 | — | [log.md](log.md) | Журнал обновлений вики | ✅ |
 
 ---

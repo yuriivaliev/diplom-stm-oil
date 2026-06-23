@@ -24,10 +24,7 @@ cat > "$WORKSPACE_MCP" <<EOF
 {
   "mcpServers": {
     "firecrawl": {
-      "url": "https://mcp.firecrawl.dev/v2/mcp",
-      "headers": {
-        "Authorization": "Bearer ${KEY}"
-      }
+      "url": "https://mcp.firecrawl.dev/${KEY}/v2/mcp"
     }
   }
 }
@@ -36,7 +33,24 @@ EOF
 cp "$WORKSPACE_MCP" "$DIPLOMA_MCP"
 chmod 600 "$WORKSPACE_MCP" "$DIPLOMA_MCP" 2>/dev/null || true
 
+# Home MCP (все workspace)
+HOME_MCP="$HOME/.cursor/mcp.json"
+mkdir -p "$(dirname "$HOME_MCP")"
+cp "$WORKSPACE_MCP" "$HOME_MCP"
+chmod 600 "$HOME_MCP" 2>/dev/null || true
+
+# Workspace subfolder 03_PGMM_… (симлинк; путь ../../ — не ../, иначе цикл)
+SUB03="$(cd "$(dirname "$0")/../03_PGMM_ODSA_упаковка_конкуренты" && pwd)"
+SUB03_MCP_DIR="$SUB03/.cursor"
+SUB03_MCP="$SUB03_MCP_DIR/mcp.json"
+if [[ -d "$SUB03" ]]; then
+  mkdir -p "$SUB03_MCP_DIR"
+  ln -sf "../../.cursor/mcp.json" "$SUB03_MCP"
+fi
+
 echo "Готово:"
 echo "  $WORKSPACE_MCP"
 echo "  $DIPLOMA_MCP"
+echo "  $HOME_MCP"
+[[ -L "$SUB03_MCP" ]] && echo "  $SUB03_MCP -> ../../.cursor/mcp.json"
 echo "Перезапустите Cursor или: Settings → Tools & MCP → Refresh."
