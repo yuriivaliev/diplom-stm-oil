@@ -309,6 +309,33 @@
 
 ---
 
+## Унифицированная таблица ODSA×PGMM (canonical · 18 строк)
+
+> Схема: [`ODSA_matrix_row_шаблон.md`](../../03_PGMM_ODSA_упаковка_конкуренты/ODSA_matrix_row_шаблон.md) · формат 4L · rev. 3
+
+| # | Параметр | Значение | Evidence | Confidence |
+|---|----------|----------|----------|--------------|
+| 1 | M_SYSTEM (PGMM) | techno_vital_armor («Техно-Витальная Броня») | wiki/12; delta/13 §6 | H |
+| 2 | Carrier morphology (PGMM) | «Торс» + рёбра + ручка | wiki/12; delta/13 §6 | H |
+| 3 | Класс продукта (синт / полусинт) | **Fully Synthetic** (EN) · RU overlay: **синтетическое** | EVID-M01; M16 | H / M |
+| 4 | SAE 5W-40 — legibility | **High** — gold badge, контраст vs чёрный/серебро | EVID-M01; delta/13 §6 | H |
+| 5 | API — видимость (front / back) | Front: **—** · Back base: **SJ–SN + CF** · RU overlay: **CF–SP incl. SN Plus** | EVID-M02; M04; M17; F-M02 | H |
+| 6 | ACEA — видимость (front / back) | **A3/B4 · A3/B3 + A3/B4** (front selective subset) | EVID-M01; M04; M17; F-M05 | H |
+| 7 | OEM / допуски — front (effective) | **Нет** на base front | EVID-M01; M11; F-M03 | H |
+| 8 | OEM / допуски — back / site / overlay | Base back: VW, MB 229.3, Porsche, Renault, PSA, **AVTOVAZ**, FIAT · Overlay: +**GM LL-B-025**, **−AVTOVAZ** vs base | EVID-M05; M17; F-M13; F-M14 | M |
+| 9 | Benefit-icons — доказуемость | **Moderate** — иконки на 4L типичны; plasma ring = метафора | wiki/12; M01 | M |
+| 10 | Cross-face consistency | **Partial pass** (base wrap); overlay = отдельный слой | EVID-M11; F-M11; CR-M03 | H |
+| 11 | Digital / overlay vs pack gap | **RU overlay superset** vs photographed base back (API SP, GM, AAE B7) | EVID-M17 vs M04–M06; F-M13 | M |
+| 12 | Anti-fraud UX | **None** | EVID-M01–M02; vs F-G09 | H |
+| 13 | RF supply & языковая модель | **Parallel import** · base **EN+TR** + **RU overlay sticker** | EVID-M07; M14; M15; M16 | H |
+| 14 | Обязательная маркировка РФ | Через **importer overlay** (text attestation); base: allergen, GB+TR | EVID-M08; M16–M17; F-M04 | M |
+| 15 | Кириллица vs латиница | Base **EN dominant**; RF reader → **overlay RU** (M16) | EVID-M07; M16 | M |
+| 16 | Thumbnail robustness (~120 px) | **High** — Mobil red + 5W-40 gold | delta/13 §6; wiki/12 | H |
+| 17 | Cognitive load / negative space | **High uniform dense** — 100% label utilization | wiki/12; delta/13 §6 | H |
+| 18 | Legacy / rev. risk на полке | **Low** — wrap stable since 2022 | EVID-M13; M09 | H |
+
+---
+
 ## Сводка ODSA × PGMM (тройка конкурентов 4L)
 
 | Параметр | LUKOIL LUXE | GPN Premium N | Mobil Super 3000 x1 |

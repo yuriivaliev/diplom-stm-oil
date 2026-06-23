@@ -47,3 +47,5 @@
 | 23.06.2026 | ODSA claims audit LUKOIL LUXE 5W-40 4L (front+back) | 16, index | фото SKU + спецификации оператора |
 | 23.06.2026 | ODSA LUKOIL rev.2: canonical SN/CF via lukoil-masla.ru; legacy SL front deprecated | 16 | скрин сайта оператора |
 | 23.06.2026 | ODSA LUKOIL rev.3: current front photo SN/CF (LUXE SYNTHETIC); evolution SL→SN зафиксирована | 16 | фото фронт оператора |
+| 23.06.2026 | **Canonical matrix row** (18 строк ODSA×PGMM) — wiki/16–18 + `ODSA_matrix_row_шаблон.md` | 16, 17, 18, README `03_…` | унификация для сводной матрицы |
+| 23.06.2026 | **Матрица PGMM+ODSA 5W-40** (6×18) + wiki `08_PGMM_упаковка.md` | `03_…/матрица_…`, 08, index | transpose wiki/16–18 + PGMM 10–15 |

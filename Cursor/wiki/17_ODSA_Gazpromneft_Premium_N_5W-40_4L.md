@@ -267,6 +267,33 @@
 
 ---
 
+## Унифицированная таблица ODSA×PGMM (canonical · 18 строк)
+
+> Схема: [`ODSA_matrix_row_шаблон.md`](../../03_PGMM_ODSA_упаковка_конкуренты/ODSA_matrix_row_шаблон.md) · формат 4L · rev. 2
+
+| # | Параметр | Значение | Evidence | Confidence |
+|---|----------|----------|----------|--------------|
+| 1 | M_SYSTEM (PGMM) | cognitive_amortization + institutional_anxiety | wiki/11; delta/15 §6 | H |
+| 2 | Carrier morphology (PGMM) | Широкая канистра + ручка | wiki/11; delta/15 §6 | H |
+| 3 | Класс продукта (синт / полусинт) | **Синтетическое** · API **SN/CF** | EVID-G01; G04–G05; G10 | H |
+| 4 | SAE 5W-40 — legibility | **High** — гиперболизированный heuristic cue | EVID-G01; G08; delta/15 §6 | H |
+| 5 | API — видимость (front / back) | **SN/CF · SN/CF** | EVID-G01; G04 | H |
+| 6 | ACEA — видимость (front / back) | **A3/B4 · A3/B4** (+ **A3/B3** только site) | EVID-G01; G04; G11; F-G05 | H |
+| 7 | OEM / допуски — front (effective) | **Listed, microtype** — формально есть, с полки **нечитаемо** | EVID-G02; G08; F-G03 | H |
+| 8 | OEM / допуски — back / site / overlay | Back: MB 229.3, Renault, VW, PSA, AVTOVAZ, STO · Site **superset**: +226.5, GM, Porsche, BMW, УМЗ | EVID-G04; G11; F-G04 | H / M |
+| 9 | Benefit-icons — доказуемость | **Low** — абстрактные thermo-swirls, без инженерной расшифровки | wiki/11; G08 | M |
+| 10 | Cross-face consistency | **Pass** — core claims coherent | EVID-G01; G04–G05; G10–G11; F-G01 | H |
+| 11 | Digital / overlay vs pack gap | **Site superset** — расширенный OEM/API vs physical | EVID-G11 vs G04; F-G04–G06 | M |
+| 12 | Anti-fraud UX | **3662.ru** + back code + site «100% гарантия» | EVID-G03; G06; G12; F-G09 | H |
+| 13 | RF supply & языковая модель | **Official RF** · integrated native RU wrap | EVID-G01; G13; G15 | H |
+| 14 | Обязательная маркировка РФ | **EAC**, штамп, партия, объём 4L на обороте | EVID-G07; G04 | H |
+| 15 | Кириллица vs латиница | **Кириллица dominant** на фронте; PREMIUM N латиница | EVID-G01 | H |
+| 16 | Thumbnail robustness (~120 px) | **Med-high** — бренд + оранжевый 5W-40; OEM в thumb **↓** | delta/15 §6; F-G03 | M |
+| 17 | Cognitive load / negative space | **High claustrophobic** — near-zero whitespace | wiki/11; delta/15 §6 | H |
+| 18 | Legacy / rev. risk на полке | **Low** — wrap stable (operator + GPN-01 render) | EVID-G13; G15; G10 | H |
+
+---
+
 ## Issues for discussion
 
 1. ~~Добавить **GPN-01** в wiki/04~~ → **Closed** rev. 2

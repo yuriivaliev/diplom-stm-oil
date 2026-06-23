@@ -212,6 +212,33 @@
 
 ---
 
+## Унифицированная таблица ODSA×PGMM (canonical · 18 строк)
+
+> Схема: [`ODSA_matrix_row_шаблон.md`](../../03_PGMM_ODSA_упаковка_конкуренты/ODSA_matrix_row_шаблон.md) · формат 4L · rev. 3
+
+| # | Параметр | Значение | Evidence | Confidence |
+|---|----------|----------|----------|--------------|
+| 1 | M_SYSTEM (PGMM) | industrial_hyper_armor + epistemic_void (ActiPure legacy) | wiki/10; delta/14 §6 | H |
+| 2 | Carrier morphology (PGMM) | Асимметричная канистра + ручка | wiki/10; delta/14 §6 | H |
+| 3 | Класс продукта (синт / полусинт) | **Синтетическое** · API **SN/CF** (current) | EVID-L10; L03–L05; L09 | H |
+| 4 | SAE 5W-40 — legibility | **High** — телеметрическая полоса, контраст vs золото | EVID-L10; wiki/10; delta/14 §6 | H |
+| 5 | API — видимость (front / back) | **SN/CF · SN/CF** | EVID-L10; L03 | H |
+| 6 | ACEA — видимость (front / back) | Front: **не видно** · Back: **A3/B4, A3/B3** | EVID-L04; L10 (front) | H |
+| 7 | OEM / допуски — front (effective) | **Нет** — только API + 5W-40 + 4L | EVID-L10; F-L03 | H |
+| 8 | OEM / допуски — back / site / overlay | Back + site: VW, MB 226.5/229.3, Renault, PSA, Fiat, **AVTOVAZ** | EVID-L04; L09 | H |
+| 9 | Benefit-icons — доказуемость | Current SYNTHETIC: **минимум**; ActiPure — **только legacy** | EVID-L02 (dep.); L10 | M |
+| 10 | Cross-face consistency | **Pass** (current wrap) | EVID-L10 = L03–L05 = L09 | H |
+| 11 | Digital / overlay vs pack gap | Site **≈ pack** (no superset gap) | EVID-L09 vs L04 | H |
+| 12 | Anti-fraud UX | **—** (нет 3662/QR на каноне) | EVID-L10; L03 | H |
+| 13 | RF supply & языковая модель | **Official RF** · integrated native wrap | EVID-L06; L10 | H |
+| 14 | Обязательная маркировка РФ | Производитель, ISO/IATF на обороте; **EAC/штамп — verify на фото** | EVID-L06; L03 | M |
+| 15 | Кириллица vs латиница | **Кириллица домinant** («СИНТЕТИЧЕСКОЕ») + **LUXE SYNTHETIC** EN | EVID-L10 | H |
+| 16 | Thumbnail robustness (~120 px) | **High** — золото + LUXE + 5W-40 | delta/14 §6; wiki/10 | H |
+| 17 | Cognitive load / negative space | **High uniform** — без «дыхания», щит + карбон | wiki/10; delta/14 §6 | H |
+| 18 | Legacy / rev. risk на полке | **Major** — SL/semi/ActiPure facings возможны (F-L10) | EVID-L01 vs L10 | M |
+
+---
+
 ## Issues for discussion
 
 1. Перепрогон **PGMM full** на EVID-L10 (LUXE SYNTHETIC front).
