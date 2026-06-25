@@ -6,6 +6,27 @@
 
 | Дата | Действие | Страницы | Источник |
 |------|----------|----------|----------|
+| 25.06.2026 | **ODSA** Mobil Super 2000 x1 10W-40 4L+1L — claims audit locked; API SN+ back-only; MB 229.1 cross-format lacuna 1L; doliv gap vs LUKOIL/GPN 1L; import EN/TR no Cyrillic | 52, 53, 50, 51, index, 08 | skill stm-odsa, фото 4L+1L front+back |
+| 25.06.2026 | **PGMM delta** Mobil Super 2000 x1 10W-40 1L vs 4L — MOCC_MS2D_01…LAC02; DRY rescale; API front lacuna ↑ vs LUKOIL/GPN 1L; grip-ridges; gold droplets crop | 51, 50, index, 08 | skill stm-pgmm-delta, фото 1L front+back |
+| 25.06.2026 | **PGMM _full** Mobil Super 2000 x1 10W-40 4L — import mid-tier; down-tier fluid kinetics vs 3000; API SN back; peer LUKOIL/GPN Super 10W-40 | 50, index, 08 | skill stm-pgmm, фото front+back |
+| 25.06.2026 | **ODSA** GPN Super 10W-40 4L+1L — claims audit locked; cross-face Partial Pass (ZMZ front/back split); UMZ absent vs LUKOIL; scratch 1L lacuna; GPN-03 scrape blocked | 48, 49, 46, 47, index | skill stm-odsa, фото 4L+1L front+back |
+| 25.06.2026 | **PGMM delta** GPN Super 10W-40 1L vs 4L — MOCC_GSD_01…LAC02; таблица 4L vs 1L; OEM front microtype robust; oil-level strip + scratch lacuna | 47, 46, index | skill stm-pgmm-delta, фото 1L front+back |
+| 25.06.2026 | **PGMM _full** GPN Super 10W-40 4L — peer LUKOIL SUPER; front+back; swirl-lite M_SYSTEM; OEM partial front; GPN-03 pending | 46, index, 08 | skill stm-pgmm, фото front+back |
+| 25.06.2026 | **ODSA** LUKOIL SUPER 10W-40 4L+1L — claims audit locked; triangulation LLK-03; artifact=canonical API SG/CD; cross-face Pass; point-ref Classic/Protect | 44, 45, 42, 43, index | skill stm-odsa, фото 4L+1L front+back |
+| 25.06.2026 | **PGMM delta** LUKOIL SUPER 10W-40 1L vs 4L — MOCC_LSD_01…LAC01; таблица 4L vs 1L; front API SG robust; DRY rescale | 43, 42, index | skill stm-pgmm-delta, фото 1L front+back |
+| 25.06.2026 | **PGMM _full** LUKOIL SUPER 10W-40 4L — point-ref Classic/Protect · ЮФО; front+back; artifact=canonical API SG/CD (LLK-03) | 42, index, 08, 04 | skill stm-pgmm, фото front+back |
+| 25.06.2026 | **ODSA** Mobil 1 ESP 5W-30 4L+1L — claims audit locked; 1L back canon API SP/ACEA C3/OEM; 4L back photo lacuna + line inherit; матрица 5W-30 rev.1 | 40, 41, 38, 39, 08, index, `03_…/матрица_5W-30` | skill stm-odsa, фото 4L+1L front+back |
+| 25.06.2026 | **PGMM delta** Mobil 1 ESP 5W-30 1L vs 4L — MOCC_ESPD_01…LAC02; back unlock API SP/ACEA C3/OEM; таблица 4L vs 1L | 39, 38, index | skill stm-pgmm-delta, фото 1L front+back |
+| 25.06.2026 | **PGMM _full** Mobil 1 ESP 5W-30 4L — point-ref tier-1; Emission-Network M_SYSTEM; front+back (back unreadable) | 38, index, 08 | skill stm-pgmm, фото front+back |
+| 25.06.2026 | **ODSA** GPN Premium C3 5W-30 4L+1L — claims audit locked; GPN-02 triangulation; photo SP/SN closed by canon rule; dexos2 · OEM microtype · authenticity 1L gap | 36, 37, 32, 33, 04, 08, index | skill stm-odsa, фото 4L+1L front+back |
+| 25.06.2026 | **ODSA** LUKOIL GENESIS ARMORTECH GC 5W-30 4L+1L — claims audit locked; triangulation LLK-01; CR 229.52 closed on 1L photo | 34, 35, 30, 31, 08, index | skill stm-odsa, фото 4L+1L front+back |
+| 25.06.2026 | **Правило canon specs:** фото vs site — **наивысший допуск** (API SP > SN); AGENTS, skills stm-pgmm/odsa/delta, 08_PGMM | AGENTS, 08, skills | пользователь + GPN site screenshot |
+| 25.06.2026 | **PGMM delta rev.2** GPN Premium C3 1L — triangulation API SP; MOCC_GC3D_07 = legacy SN artifact | 33, 32 | skill stm-pgmm-delta + site |
+| 25.06.2026 | **PGMM delta** GPN Premium C3 5W-30 1L vs 4L — MOCC_GC3D_01…LAC02; таблица 4L vs 1L | 33, 32, index | skill stm-pgmm-delta, фото 1L front+back |
+| 25.06.2026 | **PGMM _full** GPN Premium C3 5W-30 4L — новый конкурент вне матриц 5W-40/0W-20; front+back; spec-in-name M_SYSTEM | 32, index, 08 | skill stm-pgmm, фото front+back |
+| 25.06.2026 | **PGMM delta** LUKOIL GENESIS ARMORTECH GC 5W-30 1L vs 4L — MOCC_LGD_01…06; таблица 4L vs 1L; +229.52 back | 31, 30, index, 08 | skill stm-pgmm-delta, фото 1L front+back |
+| 25.06.2026 | **PGMM _full** LUKOIL GENESIS ARMORTECH GC 5W-30 4L — новый конкурент вне матриц 5W-40/0W-20; front+back | 30, index, 08 | skill stm-pgmm, фото 3 ракурса |
+| 25.06.2026 | **Матрица 10W-40 rev.1** (6×18); transpose §3.0 wiki/44,48,52; кластер C в 08 | 08, `03_…/матрица_10W-40`, index | skill stm-pgmm-odsa |
 | 25.06.2026 | **Синхронизация + каркас этап 7:** Eliten, 2 матрицы; 9 stubs `06_…/главы/`; README, overview, 01, AGENTS, журнал | 01, 08, index, overview, AGENTS, `06_…` | пользователь |
 | 25.06.2026 | **Матрица 0W-20 rev.1** (4×18); wiki/19–26; dual-cluster в 08 | 08, 19–26, `03_…/матрица_0W-20` | skill stm-pgmm-odsa |
 | 27.05.2026 | Зафиксирован цикл **DR → декомпозиция (2a/3a) → этапы 4+**; гейт в AGENTS, 01, 07 | 08, 01, 06, 07, AGENTS | согласование с пользователем |

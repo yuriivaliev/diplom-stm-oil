@@ -90,7 +90,8 @@ Cursor/wiki/{NN}_PGMM_{brand}_{line}_{sae}_{format}_delta.md
 ## Hard constraints
 
 - **1 format = 1 row** в матрице.
-- Не выдумывать claims — только видимое на delta-формате.
+- Не выдумывать claims — только видимое на delta-формате **+ канон SKU** при triangulation.
+- **Фото vs канон:** при конфликте API/ACEA между форматами или с сайтом — **наивысший допуск** (API **SP > SN**…); устаревшее фото не понижает канон. Delta описывает **упаковку/макет**; spec-generation в матрице — по сайту оператора.
 
 ## Companion skills
 

@@ -20,6 +20,11 @@
 | MK-04 | https://docs.crpt.ru/gismt/…маркировке_тг_автозапчасти/ | Маркировка |
 | STM-01 | https://sintecgroup.ru/news/sintec_lubricants_postavila_svyshe_500_tysyach_litrov_avtomasel_pod_brendom_agr/ | СТМ AGR |
 | **GPN-01** | https://gazpromneft-oil.ru/ru/products/cars/gazpromneft-premium-n-5w-40 | Premium N 5W-40 · блок **«Ключевые характеристики»** = канон line-level (ODSA wiki/17 §canonical · wiki/28) · **verified** 23.06.2026 |
+| **GPN-02** | https://gazpromneft-oil.ru/ru/products/cars/gazpromneft-premium-c3-5w-30 | Premium C3 5W-30 · блок **«Ключевые характеристики»** = канон line-level (ODSA wiki/36–37 · PGMM wiki/32–33) · **verified** operator screenshot 25.06.2026 · auto-scrape **blocked** (pattern GPN-01) |
+| **GPN-03** | https://gazpromneft-oil.ru/ru/products/all/gazpromneft-super-10w-40 | Super 10W-40 · полусинтетическое универсальное (PGMM wiki/46) · **pending verify** 25.06.2026 · auto-scrape **blocked** (pattern GPN-01/02) |
+| **LLK-01** | https://lukoil-masla.ru/ru/products/ProductCard/lukoil-genesis-armortech-gc-5w-30 | GENESIS ARMORTECH GC 5W-30 · line specs (ODSA wiki/32–33) · **verified** 25.06.2026 |
+| **LLK-02** | https://lukoil-masla.ru/ru/products/ProductCard/lukoil-luxe-synthetic-5w-40 | LUXE SYNTHETIC 5W-40 · line specs (ODSA wiki/16 · wiki/27) · **verified** 23.06.2026 |
+| **LLK-03** | https://lukoil-masla.ru/ru/products/ProductCard/lukoil-super-10w-40 | LUKOIL SUPER 10W-40 · API SG/CD · АВТОВАЗ/УМЗ/ЗМЗ (PGMM wiki/42) · **verified** 25.06.2026 |
 
 ---
 

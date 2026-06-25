@@ -76,6 +76,7 @@ Cursor/wiki/{NN}_ODSA_{Brand}_{Line}_{SAE}_{format}.md
 ## Hard constraints
 
 - **Не выдумывать** API/OEM — только artifact + «н/д» / «нечитаемо».
+- **Фото vs канон:** retail/web фото часто устаревшие. При конфликте поколений — **канон SKU = наивысший допуск** (API **SP > SN > SL**…); triangulation с официального сайта **перекрывает** legacy label на фото. Evidence Ledger: artifact (фото) и canonical claim (матрица) **раздельно**.
 - URL только из `wiki/04_источники_и_URL.md`; новые — верифицировать, добавить в 04.
 - **1 format = 1 row** в матрице; 4L ≠ 1L.
 - Не смешивать DR-A доли и ODSA claims.

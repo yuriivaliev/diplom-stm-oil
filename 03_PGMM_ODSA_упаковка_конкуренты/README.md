@@ -11,6 +11,8 @@
 | **Delta-анализ** (1L vs 4L, тот же SKU) | [`PGMM_delta_промпт_шаблон.md`](PGMM_delta_промпт_шаблон.md) |
 | **Canonical ODSA matrix row** (18 строк × SKU) | [`ODSA_matrix_row_шаблон.md`](ODSA_matrix_row_шаблон.md) |
 | **Сводная матрица PGMM+ODSA 5W-40** (6 SKU) | [`матрица_PGMM_ODSA_5W-40.md`](матрица_PGMM_ODSA_5W-40.md) |
+| **Сводная матрица PGMM+ODSA 0W-20** (4 SKU) | [`матрица_PGMM_ODSA_0W-20.md`](матрица_PGMM_ODSA_0W-20.md) |
+| **Сводная матрица PGMM+ODSA 10W-40** (6 SKU) | [`матрица_PGMM_ODSA_10W-40.md`](матрица_PGMM_ODSA_10W-40.md) |
 | Wiki-сводка этапа 4 | [`Cursor/wiki/08_PGMM_упаковка.md`](../Cursor/wiki/08_PGMM_упаковка.md) |
 | Методология PGMM (первичник) | `PGMM.md`, `PGMM.txt` |
 | Готовые отчёты | `Cursor/wiki/10_PGMM_*.md`, `11_…`, `12_…` |
