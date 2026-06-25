@@ -1,6 +1,6 @@
 # Источники и URL (канон для сносок)
 
-**Обновлено:** 23.06.2026  
+**Обновлено:** 25.06.2026  
 **Полные реестры:** `01_DR_…/A_URL_реестр_run2.md`, `02_DR_…/B_URL_реестр_run1.md`
 
 ---
@@ -19,7 +19,7 @@
 | EX-01 | https://corporate.exxonmobil.com/news/news-releases/2022/0301_exxonmobil-to-discontinue-operations-at-sakhalin-1_make-no-new-investments-in-russia | Exxon |
 | MK-04 | https://docs.crpt.ru/gismt/…маркировке_тг_автозапчасти/ | Маркировка |
 | STM-01 | https://sintecgroup.ru/news/sintec_lubricants_postavila_svyshe_500_tysyach_litrov_avtomasel_pod_brendom_agr/ | СТМ AGR |
-| **GPN-01** | https://gazpromneft-oil.ru/ru/products/cars/gazpromneft-premium-n-5w-40 | Premium N 5W-40 · ODSA wiki/17 · **verified** 23.06.2026 (operator screenshot; bot-block для auto-scrape) |
+| **GPN-01** | https://gazpromneft-oil.ru/ru/products/cars/gazpromneft-premium-n-5w-40 | Premium N 5W-40 · блок **«Ключевые характеристики»** = канон line-level (ODSA wiki/17 §canonical · wiki/28) · **verified** 23.06.2026 |
 
 ---
 

@@ -78,6 +78,7 @@
 | **EVID-G14** | **Context** | GPN-01 URL | [GPN-01](04_источники_и_URL.md) · verified registry 23.06.2026 | A | Active |
 | **EVID-G15** | **Context** | ART-006 + operator 23.06.2026 | Повторное подтверждение: wrap **не менялся**; GPN-01 + screenshot = актуальный канон | B | Active |
 | **EVID-G16** | **Context** | ART-007 | Firecrawl `firecrawl_scrape` GPN-01: ERR_TUNNEL / timeout — auto-ingest **н/д** | C | Negative case |
+| **EVID-G18** | **Artifact** | **GPN-01** · operator 25.06.2026 | Блок **«Ключевые характеристики»** verbatim: тип синт.; SAE 5W-40; API SN/CF; ACEA A3/B3,A3/B4; OEM BMW LL-01, GM LL-B-025, MB 226.5+229.3, Porsche A40, PSA, Renault RN0700/RN0710, VW 502/505, AVTOVAZ, УМЗ | **A** | **Canonical site** |
 
 ### Conflict notes
 
@@ -301,6 +302,61 @@
 3. **Следующий кейс:** Mobil Super 3000 x1 5W-40 4L ODSA
 
 **DoD:** ✅ ODSA GPN 5W-40 4L — **locked rev. 2** (DC-EP:A). Pending: GAP-G03, TDS optional.
+
+---
+
+## Canonical site · «Ключевые характеристики» (GPN-01)
+
+**Источник:** [GPN-01](04_источники_и_URL.md) · `gazpromneft-oil.ru` · блок **«Ключевые характеристики»** · зафиксировано оператором **25.06.2026** · = EVID-G11 (rev.2) + **EVID-G18** (rev.3 verbatim).
+
+| Поле | Канон line-level |
+|------|------------------|
+| **Тип** | полностью синтетическое |
+| **SAE** | 5W-40 |
+| **Объём** | по SKU (на карточке пример **4 л**; для 1L — **1 л**) |
+| **API** | SN, CF |
+| **ACEA** | A3/B3, A3/B4 |
+| **OEM** | BMW Longlife-01; General Motors LL-B-025; Mercedes-Benz **MB 226.5**, **MB 229.3**; Porsche A40; PSA B71 2296; Renault **RN0700**, **RN0710**; Volkswagen VW 502.00, VW 505.00; ПАО «АВТОВАЗ»; **УМЗ** |
+
+---
+
+## Governance · back label parity (rev. 3 · project rule)
+
+**Правило (зафиксировано 25.06.2026):** полный стек **«Ключевых характеристик» GPN-01** (тип, SAE, API, ACEA, OEM) **должен присутствовать на задней этикетке** каждой фasовки (1L / 4L / …). Объём — **format-specific** на штампе/блоке маркировки.
+
+**Эталон проверки back:** таблица compliance ниже vs EVID-G04 (фото оборота 4L).
+
+| Claim (GPN-01) | Back 4L (G04) | Compliance |
+|----------------|---------------|------------|
+| Синтетическое | ✅ G05 | **Pass** |
+| SAE 5W-40 | ✅ (front+back line) | **Pass** |
+| API SN, CF | ✅ SN/CF | **Pass** |
+| ACEA A3/B4 | ✅ | **Pass** |
+| ACEA **A3/B3** | ❌ | **Fail** |
+| MB **229.3** | ✅ | **Pass** |
+| MB **226.5** | ❌ | **Fail** |
+| BMW Longlife-01 | ❌ | **Fail** |
+| GM LL-B-025 | ❌ | **Fail** |
+| Porsche A40 | ❌ | **Fail** |
+| PSA, Renault, VW, AVTOVAZ | ✅ | **Pass** |
+| **УМЗ** | ❌ | **Fail** |
+| STO 84035624-179-2015 | ✅ (back only) | Extra · not on site |
+
+**Вывод:** физический **back ⊂ site canonical** — **6 OEM/ACEA gaps** на обороте при том, что сайт декларирует полный стек. Для **1L** — **line inherit** того же back-template ([28](28_ODSA_Gazpromneft_Premium_N_5W-40_1L.md) rev.3).
+
+---
+
+### F-G11 — Major · Back label не содержит полный стек GPN-01 (governance gap)
+
+| Поле | Значение |
+|------|----------|
+| **Observation** | По правилу back parity — на обороте **отсутствуют**: ACEA A3/B3, MB 226.5, BMW LL-01, GM LL-B-025, Porsche A40, УМЗ (G04 vs G18). |
+| **Evidence IDs** | EVID-G04; **EVID-G18**; EVID-G11 |
+| **Interpretation** | Не только «digital superset» (F-G04), а **невыполнение заявленного канона** на physical back; часть OEM **мигрировала на front 1L** (wiki/28), но **не на back**. |
+| **Severity & Confidence** | **Major** · **High** |
+| **Recommendations** | structural: back = GPN-01 stack readable; governance: pack back ⊆ site **и** site = back |
+
+**Rev. 3 addendum:** 25.06.2026 · canonical + back parity rule · F-G11 · CR-G02 reframed as **back non-compliance**.
 
 ---
 

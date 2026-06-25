@@ -1,8 +1,8 @@
 # Wiki Index — диплом СТМ автомасла
 
-**Обновлено:** 23.06.2026 · **Дедлайн диплома:** 27.06.2026
+**Обновлено:** 25.06.2026 · **Дедлайн диплома:** 27.06.2026
 
-> **Сейчас:** этап **4** ✅ (матрица) · этапы **5–7** ⚪ · **фокус:** название → эскизы → текст (`06_синтез_…/Оглавление_и_каркас.md`)
+> **Сейчас:** этап **4** ✅ · этапы **5–6** ⚪ · **7** 🟡 каркас + stubs · **фокус:** Eliten DDx → эскиз → текст
 
 > Агент: читай **сначала** этот файл, затем 1–3 страницы по задаче.
 
@@ -22,9 +22,20 @@
 | 06 | [06_методология_протокол_аналитика.md](06_методология_протокол_аналитика.md) | Протокол аналитика, DR раздельно | ✅ |
 | 07 | [07_этапы_4-7_впереди.md](07_этапы_4-7_впереди.md) | Этапы 5–7: название, дизайн, синтез | 🟡 |
 | 08 | [08_декомпозиция_после_DR.md](08_декомпозиция_после_DR.md) | DR → декомпозиция → wiki; чеклисты | ✅ |
-| — | [08_PGMM_упаковка.md](08_PGMM_упаковка.md) | Сводка этапа 4: матрица PGMM+ODSA 5W-40 | ✅ |
+| — | [08_PGMM_упаковка.md](08_PGMM_упаковка.md) | Сводка этапа 4: матрицы PGMM+ODSA **5W-40 + 0W-20** | ✅ |
 | 09 | [09_skills_реестр.md](09_skills_реестр.md) | Cursor Skills | ✅ |
-| 10–18 | PGMM/ODSA отчёты | wiki/10 … wiki/18 | ✅ |
+| 10–18 | PGMM/ODSA отчёты 5W-40 | wiki/10 … wiki/18 | ✅ |
+| 19 | [19_PGMM_mobil_1_0w_20_5L.md](19_PGMM_mobil_1_0w_20_5L.md) | PGMM _full Mobil 1 0W-20 5L (SAE-фронтир) | ✅ |
+| 20 | [20_PGMM_mobil_1_0w_20_1L_delta.md](20_PGMM_mobil_1_0w_20_1L_delta.md) | PGMM delta Mobil 1 0W-20 1L vs 5L | ✅ |
+| 21 | [21_ODSA_mobil_1_0w_20_5L.md](21_ODSA_mobil_1_0w_20_5L.md) | ODSA Mobil 1 0W-20 5L (front+back locked) | ✅ |
+| 22 | [22_ODSA_mobil_1_0w_20_1L.md](22_ODSA_mobil_1_0w_20_1L.md) | ODSA Mobil 1 0W-20 1L (front provisional) | 🟡 |
+| 23 | [23_PGMM_castrol_edge_0w_20_v_5L.md](23_PGMM_castrol_edge_0w_20_v_5L.md) | PGMM _full Castrol EDGE 0W-20 V 5L (front+back) | ✅ |
+| 24 | [24_PGMM_castrol_edge_0w_20_v_1L_delta.md](24_PGMM_castrol_edge_0w_20_v_1L_delta.md) | PGMM delta Castrol EDGE 0W-20 V 1L vs 5L | ✅ |
+| 25 | [25_ODSA_castrol_edge_0w_20_v_5L.md](25_ODSA_castrol_edge_0w_20_v_5L.md) | ODSA Castrol EDGE 0W-20 V 5L (front+back locked) | ✅ |
+| 26 | [26_ODSA_castrol_edge_0w_20_v_1L.md](26_ODSA_castrol_edge_0w_20_v_1L.md) | ODSA Castrol EDGE 0W-20 V 1L (front provisional) | 🟡 |
+| 27 | [27_ODSA_LUKOIL_LUXE_5W-40_1L.md](27_ODSA_LUKOIL_LUXE_5W-40_1L.md) | ODSA LUKOIL LUXE 5W-40 1L (front + back inherit 4L) | ✅ |
+| 28 | [28_ODSA_Gazpromneft_Premium_N_5W-40_1L.md](28_ODSA_Gazpromneft_Premium_N_5W-40_1L.md) | ODSA GPN 1L rev.3 · GPN-01 back parity rule | 🟡 |
+| 29 | [29_ODSA_mobil_super_3000_x1_5w_40_1L.md](29_ODSA_mobil_super_3000_x1_5w_40_1L.md) | ODSA Mobil Super 3000 x1 5W-40 1L (front + line inherit 4L) | 🟡 |
 | — | [log.md](log.md) | Журнал обновлений вики | ✅ |
 
 **Каркас текста диплома (не wiki):** [`06_синтез_и_текст_диплома/Оглавление_и_каркас.md`](../06_синтез_и_текст_диплома/Оглавление_и_каркас.md)
@@ -37,7 +48,7 @@
 |--------|--------|
 | Написать главу «Рынок РФ» | 02, 04, overview, `06_…/главы/` |
 | Написать главу «Вязкости / продукт» | 03, 05, 04 |
-| Упаковка конкурентов | 08_PGMM, `03_…/матрица_…`, 10–18 |
+| Упаковка конкурентов | 08_PGMM, `03_…/матрица_5W-40`, `03_…/матрица_0W-20`, wiki/10–24 |
 | Название СТМ (этап 5) | `04_DD_ODSA_…/`, 08_PGMM § white space |
 | Эскизы (этап 6) | `05_визуальные_…/`, 08_PGMM |
 | **Писать диплом целиком** | **`06_синтез_…/Оглавление_и_каркас.md`** |
