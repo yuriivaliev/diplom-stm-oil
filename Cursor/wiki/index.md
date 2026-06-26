@@ -2,7 +2,7 @@
 
 **Обновлено:** 25.06.2026 · **Дедлайн диплома:** 27.06.2026
 
-> **Сейчас:** этап **4** ✅ · этапы **5–6** ⚪ · **7** 🟡 каркас + stubs · **фокус:** Eliten DDx → эскиз → текст
+> **Сейчас:** этап **5** ✅ · этап **6** ⚪ · **7** 🟡 · **фокус:** эскиз Classic 5W-40 → текст
 
 > Агент: читай **сначала** этот файл, затем 1–3 страницы по задаче.
 
@@ -60,6 +60,7 @@
 | 51 | [51_PGMM_mobil_super_2000_x1_10w_40_1L_delta.md](51_PGMM_mobil_super_2000_x1_10w_40_1L_delta.md) | PGMM delta Mobil Super 2000 x1 10W-40 1L vs 4L (front+back · DRY rescale · API front lacuna ↑) | ✅ |
 | 52 | [52_ODSA_mobil_super_2000_x1_10w_40_4L.md](52_ODSA_mobil_super_2000_x1_10w_40_4L.md) | ODSA Mobil Super 2000 x1 10W-40 4L (front+back locked · API SN+ back · MB/VW/AVTOVAZ · import EN/TR) | ✅ |
 | 53 | [53_ODSA_mobil_super_2000_x1_10w_40_1L.md](53_ODSA_mobil_super_2000_x1_10w_40_1L.md) | ODSA Mobil Super 2000 x1 10W-40 1L (front+back photo locked · MB lacuna vs 4L · doliv gap) | ✅ |
+| 54 | [54_название_СТМ_Eliten.md](54_название_СТМ_Eliten.md) | Этап 5: Eliten DDx + message architecture 4 SAE | ✅ |
 | — | [log.md](log.md) | Журнал обновлений вики | ✅ |
 
 **Каркас текста диплома (не wiki):** [`06_синтез_и_текст_диплома/Оглавление_и_каркас.md`](../06_синтез_и_текст_диплома/Оглавление_и_каркас.md)

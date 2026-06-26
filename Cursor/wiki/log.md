@@ -6,6 +6,7 @@
 
 | Дата | Действие | Страницы | Источник |
 |------|----------|----------|----------|
+| 25.06.2026 | **Этап 5 ✅** Eliten DDx funnel · contrastive Verum/Calibr · message architecture 4 SAE · Decision Record | 54, index, `04_DD_ODSA_…/` | чат этапы 1–5 |
 | 25.06.2026 | **ODSA** Mobil Super 2000 x1 10W-40 4L+1L — claims audit locked; API SN+ back-only; MB 229.1 cross-format lacuna 1L; doliv gap vs LUKOIL/GPN 1L; import EN/TR no Cyrillic | 52, 53, 50, 51, index, 08 | skill stm-odsa, фото 4L+1L front+back |
 | 25.06.2026 | **PGMM delta** Mobil Super 2000 x1 10W-40 1L vs 4L — MOCC_MS2D_01…LAC02; DRY rescale; API front lacuna ↑ vs LUKOIL/GPN 1L; grip-ridges; gold droplets crop | 51, 50, index, 08 | skill stm-pgmm-delta, фото 1L front+back |
 | 25.06.2026 | **PGMM _full** Mobil Super 2000 x1 10W-40 4L — import mid-tier; down-tier fluid kinetics vs 3000; API SN back; peer LUKOIL/GPN Super 10W-40 | 50, index, 08 | skill stm-pgmm, фото front+back |
