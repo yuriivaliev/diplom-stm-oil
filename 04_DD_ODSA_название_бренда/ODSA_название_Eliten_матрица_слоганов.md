@@ -14,7 +14,7 @@
 
 | Поле | Значение |
 |------|----------|
-| Мастер-бренд | **Eliten** · RU **1172689** (с 03.12.2025) |
+| Мастер-бренд | **Eliten** · RU **1172689** · **03.12.2025 — 08.09.2035** · кл. **04** |
 | Регион | Европейская часть РФ |
 | Линейки | **Classic/Protect** (5W-40 syn, 10W-40 semi) · **Modern/Tech** (5W-30 syn, 0W-20 FS) |
 | Severity profile | Product + legitimacy/trust |
@@ -190,7 +190,7 @@
 | **Allowed** | Master + sub-line + SKU proof + 1L doliv as above |
 | **Prohibited** | Single hero all SAE; superlatives; semi→syn lexicon |
 | **Monitoring** | ART-001 per SKU; legibility @1.2 m; pack=TDS |
-| **Reopen trigger** | FIPS blocker on Eliten; reformulation without version label |
+| **Reopen trigger** | Reformulation without version label; status change in FIPS |
 
 ---
 

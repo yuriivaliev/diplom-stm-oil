@@ -35,5 +35,5 @@
 
 | Класс МКТУ | Коллизия | Статус |
 |------------|----------|--------|
-| 04 | *Verum* pharma/fintech phonetic | ⬜ FIPS |
+| 04 | *Verum* pharma/fintech phonetic | — (contrastive; FIPS не требуется) |
 | Descriptive | «true product» proxy | 🟡 |

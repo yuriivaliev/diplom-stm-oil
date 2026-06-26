@@ -1,9 +1,8 @@
 # Кандидат: Eliten
 
-**Роль:** якорь · выбранное имя (каркас диплома) · RU **1172689**
-
+**Роль:** якорь · выбранное имя · **RU 1172689**  
 **Позиционирование:** инженерная марка на качественной базе и мировых пакетах присадок — понятный выбор под задачу (PVL → будущие pro-линейки).  
-**Contrastive:** да (primary) · **DDx funnel:** FINALIST #1 · **Decision:** RECOMMEND with LIMIT
+**Contrastive:** primary · **DDx funnel:** FINALIST #1 · **Decision:** RECOMMEND with LIMIT
 
 ---
 
@@ -11,40 +10,38 @@
 
 | Измерение | Оценка | Риск |
 |-----------|--------|------|
-| Семантика / позиционирование | Premium umbrella; «лучший в классе» | 🟡 False premium на mainstream 5W-40 |
-| Полка @1.2 m | 6 букв, латиница, distinct | 🟢 |
-| Bimodal umbrella | Modern natural; Classic via sub-line Protect | 🟡 Master звучит «дороже» Protect |
-| PGMM white space | E trust · F Cyrillic «Элитен» | 🟡 Слабее A/D без proof copy |
-| Trust & official supply | ТЗ + official RF narrative | 🟢 Stabilizer: RU 1172689 |
-| Cyrillic / RU market | Элитен — без барьера | 🟡 «Элита» на mass DIY |
-| Правовой прокси (не FIPS) | RU 1172689 — fact | 🟢 · EN *elite* generic — FIPS расширение |
-| Phonetic distance | ≠ LUKOIL/GPN/Mobil | 🟢 |
-| Sub-line fit | Eliten Classic Protect / Modern Tech | 🟢 |
-| **Funnel score** | **3.9 / 5** | Blocker **нет** |
+| Семантика / позиционирование | Engineering umbrella | 🟡 Phonetic «elite» на mass shelf |
+| Полка @1.2 m | 6 букв, латиница | 🟢 |
+| Bimodal umbrella | Sub-line несёт utility | 🟡 |
+| PGMM white space | E trust · F Cyrillic | 🟡 A/D via proof copy |
+| Trust & official supply | ТЗ + RF narrative | 🟢 |
+| **FIPS** | **RU 1172689 · кл. 04 · действует** | 🟢 **Blocker нет** |
+| Sub-line fit | Classic Protect / Modern Tech | 🟢 |
+| **Funnel score** | **3.9 / 5** | |
 
 ---
 
 ## ODSA (слоган)
 
-**Полная матрица 4 SAE:** [`ODSA_название_Eliten_матрица_слоганов.md`](ODSA_название_Eliten_матрица_слоганов.md)
-
-### Classic Protect 5W-40 (пилот)
-
-| Claim | Evidence | Confidence |
-|-------|----------|:----------:|
-| Master: Spec на этикетке — официально для РФ | PGMM A/E/F all clusters | M |
-| Proof: API SN/CF и OEM — на передней этикетке | матрица 5W-40 §6A | M |
-| Support: Защита по факту, не по пафосу | DDx LIMIT false premium | M |
-| Reject: «Максимальная защита» без lab | ODSA F-E01 Major | L |
+[`ODSA_название_Eliten_матрица_слоганов.md`](ODSA_название_Eliten_матрица_слоганов.md)
 
 ---
 
-## ТЗ (ручная проверка)
+## ТЗ — ФИПС ✅ (25.06.2026)
 
-| Класс МКТУ | Коллизия | Статус |
-|------------|----------|--------|
-| 04 (масла) | RU 1172689 зарегистрирован | ✅ project fact |
-| Расширение классов | *elite* generic EN | ⬜ **FIPS вне LLM** |
-| Phonetic | Eliten vs Elite brands | ⬜ FIPS |
+**Выписка:** [`FIPS/FIPS_Eliten_RU1172689.md`](FIPS/FIPS_Eliten_RU1172689.md)
 
-**Замена Eliten:** только при FIPS blocker (допускается по gate этапа 1).
+| Поле | Значение | Статус |
+|------|----------|:------:|
+| **(111) Регистрация** | RU **1172689** | ✅ |
+| **(210) Заявка** | **2025796734** от **08.09.2025** | ✅ |
+| **Срок** | **03.12.2025 — 08.09.2035** | ✅ |
+| **(450) Публикация** | **03.12.2025**, бюл. № 23 | ✅ |
+| **Статус** | **действует** (04.12.2025) | ✅ |
+| **(550) Вид** | Словесный · «Eliten» | ✅ |
+| **(511) МКТУ** | **кл. 04** — **масло моторное**, смазочные/технические масла | ✅ |
+| **(732) Правообладатель** | ООО «**НАРИН НЕФТЬ ГАЗ**» | ✅ |
+| **(750) Переписка** | Патентное бюро «Железно» | ✅ |
+| Источник | [ФИПС](https://new.fips.ru/fips_servl/fips_servlet?DB=RUTM&DocNumber=1172689&TypeFile=html) · **26.06.2026** | ✅ |
+
+**Замена Eliten:** **не требуется** (FIPS blocker снят).
