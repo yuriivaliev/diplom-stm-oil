@@ -1,6 +1,7 @@
 # ODSA — message architecture: Eliten (4 SAE × bimodal)
 
 **CASE_ID:** `ODSA_STM_Eliten_MESSAGE_ARCH_2026`  
+**Master positioning:** Eliten — инженерная марка на качественной базе и мировых пакетах присадок; понятный выбор под задачу: PVL → будущие pro-линейки  
 **Этап:** 5 · **Статус:** ✅ locked (pre-launch copy)  
 **Дата:** 25.06.2026  
 **Метод:** ODSA Audit Packet v1.6.7 · PGMM white space §6 (матрицы 5W-40 / 5W-30 / 0W-20 / 10W-40)
@@ -36,6 +37,8 @@
 ## 1. Message architecture (4 уровня)
 
 ### Уровень 1 — Master (все SKU)
+
+**Позиционирование:** инженерная марка · качественная база · мировые пакеты присадок · выбор под задачу (PVL → pro future).
 
 **RU:** «Spec на этикетке — официально для РФ.»
 
