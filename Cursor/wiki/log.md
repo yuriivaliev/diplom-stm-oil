@@ -6,6 +6,12 @@
 
 | Дата | Действие | Страницы | Источник |
 |------|----------|----------|----------|
+| 27.06.2026 | **Этап 6 rev.2 ✅** — 8 front unified graphite HDPE · 9 prompts · `финал/* rev 2.png` | 05_…/финал, README, wiki/55, 07_Дизайн, журнал, overview, AGENTS | operator finals + prompts |
+| 26.06.2026 | **Этап 6 ✅** — 3 концепта + 8 front · DESIGN · обоснование · wiki/55 | 05_визуальные_…/, 07_Дизайн, index | AI mockups |
+| 26.06.2026 | **NEG checklist N-01…N-16** — rhetoric · Cyrillic · front proof · trust · visual antidote · AI negative prompt | Eliten_DESIGN §6, бриф G-07, wiki/55 | operator gate |
+| 26.06.2026 | **International front rule N-17…N-22** — no RF/EAC/origin/legal on front · back-only local layer | Eliten_DESIGN §3·§6, бриф G-03, обоснование | operator gate |
+| 26.06.2026 | **CAT-01 red-team** — motor-oil fluid N-23/N-24 · amber not teal/green · antifreeze confusion gate | Eliten_DESIGN §6.4.1, бриф G-08, обоснование §2.1 | operator red-team |
+| 26.06.2026 | **✅ APPROVED dual-handle** — Classic Protect 5W-40 4L etalon · note + supersede single-handle v2 | Eliten_DESIGN, note, финал, wiki/55, обоснование | operator approval |
 | 25.06.2026 | **Этап 5 ✅** Eliten DDx funnel · contrastive Verum/Calibr · message architecture 4 SAE · Decision Record | 54, index, `04_DD_ODSA_…/` | чат этапы 1–5 |
 | 25.06.2026 | **ODSA** Mobil Super 2000 x1 10W-40 4L+1L — claims audit locked; API SN+ back-only; MB 229.1 cross-format lacuna 1L; doliv gap vs LUKOIL/GPN 1L; import EN/TR no Cyrillic | 52, 53, 50, 51, index, 08 | skill stm-odsa, фото 4L+1L front+back |
 | 25.06.2026 | **PGMM delta** Mobil Super 2000 x1 10W-40 1L vs 4L — MOCC_MS2D_01…LAC02; DRY rescale; API front lacuna ↑ vs LUKOIL/GPN 1L; grip-ridges; gold droplets crop | 51, 50, index, 08 | skill stm-pgmm-delta, фото 1L front+back |
