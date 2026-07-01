@@ -6,6 +6,10 @@
 
 | Дата | Действие | Страницы | Источник |
 |------|----------|----------|----------|
+| 01.07.2026 | **P7 Genspark final защита** — `ELITEN_defense_Genspark_academic-review_final.pptx` · notes 17/17 · CANON md/docx · CHANGELOG vs v6 · CLA/OST/RBS notes с09 | `презентация_защиты/`, журнал, 06 README | operator + agent |
+| 30.06.2026 | **P7 v6 защита** — `ELITEN_defense_draft_v6.pptx` · notes 17 · Genspark/Gamma 2-этапа · README | `презентация_защиты/` | operator + agent |
+| 28.06.2026 | **P7 deck-spec** — 13 слайдов + приложения + Q&A | `P7_deck-spec_FINAL.md` | FINAL rev.2 прогон |
+| 28.06.2026 | **P7 FINAL rev.1** — Master Prompt v1 + Red Team P7-01…18 | `06_…/промпты_презентации/` | operator + RT |
 | 27.06.2026 | **Этап 6 rev.2 ✅** — 8 front unified graphite HDPE · 9 prompts · `финал/* rev 2.png` | 05_…/финал, README, wiki/55, 07_Дизайн, журнал, overview, AGENTS | operator finals + prompts |
 | 26.06.2026 | **Этап 6 ✅** — 3 концепта + 8 front · DESIGN · обоснование · wiki/55 | 05_визуальные_…/, 07_Дизайн, index | AI mockups |
 | 26.06.2026 | **NEG checklist N-01…N-16** — rhetoric · Cyrillic · front proof · trust · visual antidote · AI negative prompt | Eliten_DESIGN §6, бриф G-07, wiki/55 | operator gate |

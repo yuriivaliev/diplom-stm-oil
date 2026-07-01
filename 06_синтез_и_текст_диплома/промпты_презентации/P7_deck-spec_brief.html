@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eliten · Сценарий защиты · 15 минут</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f5f7f9;
+      --surface: #fff;
+      --surface-2: #eef2f6;
+      --text: #0d2137;
+      --muted: #5a6577;
+      --border: #d5dde6;
+      --accent: #2e7d6e;
+      --accent-bg: #e8f3f0;
+      --say-bg: #fffbeb;
+      --say-border: #d97706;
+      --screen-bg: #eff6ff;
+      --screen-border: #3b82f6;
+      --stop-bg: #fef2f2;
+      --stop-border: #dc2626;
+      --ok: #166534;
+      --max: 1000px;
+      --sans: "IBM Plex Sans", system-ui, sans-serif;
+      --mono: "IBM Plex Mono", monospace;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: var(--sans); font-size: 16px; line-height: 1.55; color: var(--text); background: var(--bg); }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px 80px; }
+
+    header {
+      background: var(--text);
+      color: #fff;
+      padding: 40px 0 48px;
+    }
+    header .wrap { padding-bottom: 0; }
+    header h1 { font-size: 28px; margin: 0 0 12px; line-height: 1.2; }
+    header .lead { font-size: 18px; opacity: 0.92; max-width: 640px; margin: 0; }
+
+    .answer-box {
+      background: var(--accent-bg);
+      border: 2px solid var(--accent);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin: -32px auto 48px;
+      position: relative;
+      box-shadow: 0 12px 40px rgba(13,33,55,.08);
+    }
+    .answer-box .label {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .answer-box p { margin: 0; font-size: 17px; font-weight: 500; }
+    .answer-box .sub { margin-top: 12px; font-size: 15px; font-weight: 400; color: var(--muted); }
+
+    section { margin-bottom: 48px; }
+    h2 { font-size: 20px; margin: 0 0 16px; }
+    h2 small { font-weight: 500; color: var(--muted); font-size: 14px; }
+
+    .arc {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    @media (max-width: 700px) { .arc { grid-template-columns: 1fr 1fr; } }
+    .arc-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+    }
+    .arc-item strong { display: block; font-size: 13px; margin-bottom: 4px; }
+    .arc-item span { font-size: 12px; color: var(--muted); }
+
+    .terms {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .term {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 12px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 14px;
+    }
+    @media (max-width: 560px) { .term { grid-template-columns: 1fr; } }
+    .term b { color: var(--accent); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+
+    .not-list {
+      background: var(--stop-bg);
+      border: 1px solid var(--stop-border);
+      border-radius: 10px;
+      padding: 20px 24px;
+    }
+    .not-list ul { margin: 8px 0 0; padding-left: 20px; }
+    .not-list li { margin-bottom: 6px; font-size: 15px; }
+
+    /* Slide cards */
+    .slide-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+    .slide-head {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface-2);
+    }
+    .slide-num {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--text);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--mono);
+      font-weight: 700;
+      font-size: 16px;
+    }
+    .slide-meta h3 { margin: 0 0 4px; font-size: 17px; }
+    .slide-meta .time { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+    .slide-body { padding: 0 20px 20px; }
+
+    .block {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: 8px;
+      border-left: 4px solid;
+      font-size: 15px;
+    }
+    .block-screen { background: var(--screen-bg); border-color: var(--screen-border); }
+    .block-say { background: var(--say-bg); border-color: var(--say-border); }
+    .block-stop { background: var(--stop-bg); border-color: var(--stop-border); font-size: 14px; }
+    .block-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      opacity: .8;
+    }
+    .block p { margin: 0; }
+    .block p + p { margin-top: 10px; }
+    .block ul { margin: 8px 0 0; padding-left: 18px; }
+    .block li { margin-bottom: 4px; }
+
+    /* Deck slide previews 16:9 */
+    .deck-frame{width:100%;max-width:880px;aspect-ratio:16/9;background:#fff;border-radius:6px;box-shadow:0 8px 32px rgba(13,33,55,.12);overflow:hidden;margin:14px 0 8px;border:1px solid #c5cdd8;position:relative;color:#0d2137}
+    .deck-frame.tall{aspect-ratio:auto;min-height:360px}
+    .deck-slide{height:100%;padding:5% 6%;display:flex;flex-direction:column;font-size:clamp(9px,1.15vw,13px);line-height:1.35}
+    .deck-h{font-size:clamp(13px,1.8vw,20px);font-weight:700;margin:0 0 3%;line-height:1.15}
+    .deck-foot{position:absolute;bottom:6px;right:10px;font-family:var(--mono);font-size:8px;color:#94a3b8}
+    .deck-tag{display:inline-block;font-family:var(--mono);font-size:8px;padding:2px 6px;border-radius:3px;background:#eef2f6;color:#64748b;margin-bottom:6px}
+    .deck-cols{display:flex;gap:4%;flex:1}
+    .deck-col{flex:1;display:flex;flex-direction:column;gap:6px}
+    .deck-box{background:#f8fafc;border:1px solid #e2e8f0;border-radius:4px;padding:8px 10px;flex:1}
+    .deck-box strong{display:block;margin-bottom:4px}
+    .deck-flow{display:flex;align-items:center;gap:4px;flex-wrap:wrap;flex:1}
+    .deck-node{background:#0d2137;color:#fff;padding:6px 8px;border-radius:4px;font-size:9px;font-weight:600;text-align:center}
+    .deck-node.light{background:#e8f3f0;color:#0d2137;border:1px solid #2e7d6e}
+    .deck-arrow{color:#94a3b8}
+    .deck-table{width:100%;border-collapse:collapse;font-size:10px;margin-top:4px}
+    .deck-table th,.deck-table td{border:1px solid #e2e8f0;padding:6px 8px;text-align:left}
+    .deck-table th{background:#0d2137;color:#fff}
+    .deck-table .nd{color:#dc2626;font-weight:700}
+    .deck-timeline{display:flex;flex:1;margin-top:8px}
+    .deck-step{flex:1;text-align:center;padding:10px 6px;background:#f1f5f9;border:1px solid #e2e8f0;font-size:9px}
+    .deck-step b{display:block;font-size:10px;margin-bottom:4px}
+    .deck-waves{display:flex;gap:8px;flex:1;margin-top:6px}
+    .deck-wave{flex:1;border-radius:4px;padding:10px;font-size:9px;background:#f8fafc;border:1px solid #e2e8f0;border-top:3px solid #2e7d6e}
+    .deck-wave.w2{border-top-color:#3b82f6}.deck-wave.w3{border-top-color:#1b3a4b}
+    .deck-wave strong{display:block;font-size:11px;margin-bottom:4px}
+    .deck-comp{display:flex;gap:8px;flex:1;margin-top:6px}
+    .deck-comp-item{flex:1;height:70px;border-radius:4px;display:flex;align-items:flex-end;justify-content:center;padding:6px;font-size:8px;font-weight:700;color:#fff}
+    .deck-comp-item.luk{background:linear-gradient(135deg,#c8102e,#8b0000)}
+    .deck-comp-item.gpn{background:linear-gradient(135deg,#0066b3,#003d6b)}
+    .deck-comp-item.mob{background:linear-gradient(135deg,#1a1a1a,#444)}
+    .deck-bullets{margin:6px 0 0;padding-left:14px;font-size:9px}
+    .deck-sae{display:flex;gap:10px;flex:1;margin-top:6px}
+    .deck-sae-box{flex:1;border-radius:4px;padding:12px;text-align:center}
+    .deck-sae-box.core{background:#0d2137;color:#fff}
+    .deck-sae-box.growth{background:#eff6ff;border:1px solid #3b82f6}
+    .deck-sae-box .pct{font-size:22px;font-weight:700;display:block}
+    .deck-ws{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;flex:1;margin-top:6px}
+    .deck-ws-cell{background:#f8fafc;border:1px solid #e2e8f0;border-radius:4px;padding:8px;font-size:8px}
+    .deck-ws-cell span{font-weight:800;color:#2e7d6e;font-size:14px;display:block}
+    .deck-title-slide{background:linear-gradient(135deg,#0d2137,#1b3a4b);color:#fff;justify-content:center;text-align:center}
+    .deck-title-slide .deck-h{color:#fff;font-size:clamp(14px,2.2vw,24px)}
+    .deck-dual{display:flex;gap:12px;justify-content:center;margin-top:12px}
+    .deck-dual div{flex:1;max-width:140px;padding:10px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:4px;font-size:9px}
+    .deck-mockup-head{font-size:8px;font-weight:700;text-transform:uppercase;padding:4px 8px;color:#fff}
+    .deck-mockup-head.classic{background:#1b3a4b}.deck-mockup-head.modern{background:#0d2137;border-bottom:2px solid #3b82f6}
+    .deck-mockup-row{display:flex;gap:8px;padding:8px;background:#f8fafc;border:1px solid #e2e8f0;align-items:flex-end;justify-content:center;min-height:110px}
+    .deck-mockup-row img{object-fit:contain;object-position:bottom}
+    .deck-mockup-row .f4l img{height:80px}.deck-mockup-row .f5l img{height:96px}.deck-mockup-row .f1l img{height:40px}
+    .deck-mockup-lbl{font-size:7px;text-align:center;font-family:var(--mono);color:#64748b}
+    .deck-ribbon{display:flex;align-items:center;gap:4px;flex-wrap:wrap;margin-top:8px;font-size:8px}
+    .deck-ribbon span{padding:4px 8px;background:#0d2137;color:#fff;border-radius:999px}
+    .deck-ribbon em{color:#94a3b8;font-style:normal}
+    .deck-split{display:flex;gap:12px;flex:1;margin-top:6px}
+    .deck-split>div{flex:1}.deck-split h4{font-size:10px;margin:0 0 6px;color:#2e7d6e}
+    .deck-split.limit h4{color:#dc2626}
+    .deck-split ul{margin:0;padding-left:14px;font-size:9px}
+    .deck-ddx{width:100%;font-size:9px;border-collapse:collapse;margin-top:4px}
+    .deck-ddx th,.deck-ddx td{border:1px solid #e2e8f0;padding:5px 8px}
+    .deck-ddx th{background:#f1f5f9}.deck-ddx .pick{background:#e8f3f0;font-weight:700}
+    .deck-fips{margin-top:8px;padding:8px 10px;background:#0d2137;color:#fff;border-radius:4px;font-size:9px}
+    .deck-fips strong{font-size:12px}
+    .slide-gallery-nav{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px}
+    .slide-gallery-nav a{font-size:12px;padding:6px 12px;background:var(--surface);border:1px solid var(--border);border-radius:999px;text-decoration:none;color:var(--text);font-weight:500}
+    .slide-gallery-nav a:hover{background:var(--accent-bg);border-color:var(--accent);color:var(--accent)}
+
+    .result-box {
+      background: var(--text);
+      color: #fff;
+      border-radius: 12px;
+      padding: 28px;
+    }
+    .result-box h2 { color: #fff; margin-bottom: 12px; }
+    .result-box p { margin: 0; font-size: 17px; opacity: .95; }
+    .result-box ul { margin: 16px 0 0; padding-left: 20px; }
+    .result-box li { margin-bottom: 8px; }
+
+    .qa { border-top: 1px solid var(--border); padding-top: 12px; margin-top: 12px; }
+    .qa summary { cursor: pointer; font-weight: 600; font-size: 15px; padding: 8px 0; }
+    .qa p { margin: 8px 0 0; color: var(--muted); font-size: 15px; }
+
+    footer { text-align: center; padding: 32px 20px; font-size: 13px; color: var(--muted); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Что вы презентуете на защите</h1>
+    <p class="lead">13 слайдов · ~14 минут · комиссия ДПО МГИМО. Ниже — готовый сценарий: что показать на экране и что сказать вслух.</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="answer-box">
+    <div class="label">Главный ответ</div>
+    <p>Вы презентуете <strong>методически обоснованную концепцию запуска СТМ моторных масел Eliten</strong> — не продажу продукта и не готовый бизнес-план.</p>
+    <p class="sub">Итог для комиссии: «Рынок и SAE → white space → Eliten + ТЗ → **Ф2:** Torzhok + 8 mockups → TDS/compliance → 3 волны запуска. **Ф3** — next steps».</p>
+  </div>
+
+  <section>
+    <h2>Одной фразой <small>(если спросят «о чём работа?»)</small></h2>
+    <div class="result-box" style="background:var(--surface);color:var(--text);border:2px solid var(--accent)">
+      <p style="font-size:18px;font-weight:600;margin:0;color:var(--text)">
+        «Исследование запуска собственной марки синтетических масел Eliten в ЦФО, СЗФО и ЮФО: от анализа рынка и SAE через аудит упаковки конкурентов к названию, визуальной концепции и roadmap коммерческого запуска.»
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Логика выступления · 4 блока</h2>
+    <div class="arc">
+      <div class="arc-item"><strong>Блок 1 · ~2:30</strong><span>Слайды 1–3<br>Зачем и как исследовали</span></div>
+      <div class="arc-item"><strong>Блок 2 · ~4:30</strong><span>Слайды 4–6<br>Рынок и SAE (факты)</span></div>
+      <div class="arc-item"><strong>Блок 3 · ~6:15</strong><span>Слайды 7–11<br>Решение: Eliten + дизайн</span></div>
+      <div class="arc-item"><strong>Блок 4 · ~3:00</strong><span>Слайды 12–13<br>Нормативка + итог</span></div>
+    </div>
+    <p style="font-size:14px;color:var(--muted);margin:12px 0 0">Самый важный блок для комиссии — <strong>блок 3</strong>: там ваш продуктовый и дизайнерский результат.</p>
+  </section>
+
+  <section>
+    <h2>Roadmap · три фазы</h2>
+    <div class="table-wrap" style="background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:8px">
+      <table style="width:100%;border-collapse:collapse;font-size:14px">
+        <tr style="background:var(--surface-2)"><th style="padding:10px 14px;text-align:left">Фаза</th><th style="padding:10px 14px;text-align:left">Статус</th><th style="padding:10px 14px;text-align:left">Содержание</th></tr>
+        <tr><td style="padding:10px 14px;border-top:1px solid var(--border)"><strong>1</strong> Продукт и ТЗ</td><td style="padding:10px 14px;border-top:1px solid var(--border);color:var(--ok)">✅ аналитически</td><td style="padding:10px 14px;border-top:1px solid var(--border)">4 SKU · 3 волны · RBS · ~5,6 L</td></tr>
+        <tr><td style="padding:10px 14px;border-top:1px solid var(--border)"><strong>2</strong> R&amp;D и производство</td><td style="padding:10px 14px;border-top:1px solid var(--border);color:var(--ok)">✅ Завершено</td><td style="padding:10px 14px;border-top:1px solid var(--border)"><strong>ЛУКОИЛ Торжок</strong> (ex-Shell) · front 8/8 · 0W-20 5L+1L · 5W-30 4L+1L · Classic 4L+1L</td></tr>
+        <tr><td style="padding:10px 14px;border-top:1px solid var(--border)"><strong>3</strong> Маркетинг</td><td style="padding:10px 14px;border-top:1px solid var(--border);color:var(--warn)">⬜ Next steps</td><td style="padding:10px 14px;border-top:1px solid var(--border)">Коммуникация · регионы · цены · outside thesis</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Три термина · произнесите один раз на слайде 7</h2>
+    <p style="color:var(--muted);margin:-8px 0 0">Чтобы комиссия не подумала, что вы «запускаете только одну канистру 5W-40».</p>
+    <div class="terms">
+      <div class="term"><b>Якорь PGMM</b><span>Classic Protect <strong>5W-40 4L</strong> — где глубже всего разобрали упаковку конкурентов. Это якорь <em>исследования</em>, не единственный SKU.</span></div>
+      <div class="term"><b>Этап 6</b><span>Планировали 2 эскиза (5W-40), сделали <strong>8/8</strong> — полная design-system матрица. Scope этапа расширили, Roadmap не меняли.</span></div>
+      <div class="term"><b>Запуск</b><span>Roadmap: <strong>волна 1</strong> 5W-40+5W-30 → <strong>волна 2</strong> 0W-20 → <strong>волна 3</strong> 10W-40 ЮФО.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Что НЕ презентуете <small>(только в приложениях, если спросят)</small></h2>
+    <div class="not-list">
+      <ul>
+        <li>Полные матрицы PGMM 6×18, все промпты этапа 6, полный DR</li>
+        <li>Доли брендов 2024–2026 (их нет в open data — говорите «н/д»)</li>
+        <li>Pitch «купите Eliten», цены, P&amp;L, договор с заводом</li>
+        <li>Утверждение, что mockup = готовый продукт на полке</li>
+        <li>Утверждение, что FIPS = можно продавать завтра</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Сценарий по слайдам · макет на экране + что сказать</h2>
+    <p style="color:var(--muted);margin:-8px 0 12px">Ниже — визуальные макеты слайдов 16:9 (как в PowerPoint). Жёлтый блок — текст вслух.</p>
+    <nav class="slide-gallery-nav" aria-label="Перейти к слайду">
+      <a href="#s1">1</a><a href="#s2">2</a><a href="#s3">3</a><a href="#s4">4</a><a href="#s5">5</a>
+      <a href="#s6">6</a><a href="#s7">7</a><a href="#s8">8</a><a href="#s9">9</a><a href="#s10">10</a>
+      <a href="#s11">11</a><a href="#s12">12</a><a href="#s13">13</a>
+    </nav>
+
+    <!-- SLIDE 1 -->
+    <article class="slide-card" id="s1">
+      <div class="slide-head">
+        <div class="slide-num">1</div>
+        <div class="slide-meta"><h3>Титул</h3><div class="time">0:30 · слайд 1 из 13</div></div>
+      </div>
+      <div class="slide-body">
+        <div class="block block-screen">
+          <div class="block-label">Слайд на экране · макет 16:9</div>
+          <div class="deck-frame">
+            <div class="deck-slide deck-title-slide">
+              <div class="deck-tag">ДПО МГИМО «МГИМО НЕЙРО» · 2026</div>
+              <div class="deck-h">Запуск СТМ моторных масел Eliten</div>
+              <div class="deck-subtitle">Итоговая работа · исследование и проектная концепция</div>
+              <div class="deck-dual">
+                <div><strong>Диплом</strong><br>академическое исследование</div>
+                <div><strong>Проект СТМ</strong><br>прикладная концепция</div>
+              </div>
+              <div style="margin-top:14px;font-size:9px;opacity:.8">ЦФО · СЗФО · ЮФО · PVL synthetic &amp; semi-syn</div>
+            </div>
+            <div class="deck-foot">Слайд 1 / 13</div>
+          </div>
+        </div>
+        <div class="block block-say">
+          <div class="block-label">Сказать</div>
+          <p>«Добрый день. Тема — концепция запуска СТМ моторных масел Eliten. Работа выполнена в программе ДПО и параллельно описывает прикладной проект. Это защита исследования с проектным выводом, не коммерческий pitch.»</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- SLIDE 2 -->
+    <article class="slide-card" id="s2">
+      <div class="slide-head">
+        <div class="slide-num">2</div>
+        <div class="slide-meta"><h3>Актуальность и цель</h3><div class="time">1:00</div></div>
+      </div>
+      <div class="slide-body">
+        <div class="block block-screen">
+          <div class="block-label">Слайд на экране · макет 16:9</div>
+          <div class="deck-frame">
+            <div class="deck-slide">
+              <div class="deck-h">Актуальность и цель исследования</div>
+              <div class="deck-cols">
+                <div class="deck-col">
+                  <div class="deck-box accent"><strong>Контекст</strong>278 млн л · 196 млрд ₽ [S2-01]<br>Шоки 2022+ · Честный ЗНАК 2025 [MK-04]</div>
+                </div>
+                <div class="deck-col">
+                  <div class="deck-box dark"><strong>Цель</strong>Концепция запуска СТМ на базе DR, PGMM/ODSA, DDx, эскизов</div>
+                </div>
+                <div class="deck-col">
+                  <div class="deck-box"><strong>Задачи</strong>Рынок → SAE → упаковка → бренд → дизайн → нормативка</div>
+                </div>
+              </div>
+            </div>
+            <div class="deck-foot">Слайд 2 / 13 · без графика 2024–26</div>
+          </div>
+        </div>
+        <div class="block block-say">
+          <div class="block-label">Сказать</div>
+          <p>«Актуальность: рынок PVL retail 2023 — 278 миллионов литров. После 2022 изменилась конкурентная среда и усилился контур прослеживаемости. Цель работы — не продать масло, а показать обоснованную концепцию: рынок → вязкости → упаковка конкурентов → бренд → эскизы → зоны legal-проверки.»</p>
+        </div>
+        <div class="block block-stop">
+          <div class="block-label">Не говорить</div>
+          <p>Не строить график долей брендов на 2024–2026.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- SLIDE 3 -->
+    <article class="slide-card" id="s3">
+      <div class="slide-head">
+        <div class="slide-num">3</div>
+        <div class="slide-meta"><h3>Методология</h3><div class="time">1:00</div></div>
+      </div>
+      <div class="slide-body">
+        <div class="block block-screen">
+          <div class="block-label">Слайд на экране · макет 16:9</div>
+          <div class="deck-frame">
+            <div class="deck-slide">
+              <div class="deck-h">Методология и корпус материалов</div>
+              <div class="deck-flow">
+                <div class="deck-node">DR-A<br>рынок</div><span class="deck-arrow">→</span>
+                <div class="deck-node">DR-B<br>SAE</div><span class="deck-arrow">→</span>
+                <div class="deck-node">PGMM/ODSA<br>упаковка</div><span class="deck-arrow">→</span>
+                <div class="deck-node">DDx<br>имя</div><span class="deck-arrow">→</span>
+                <div class="deck-node light">8 mockups<br>rev.2</div><span class="deck-arrow">→</span>
+                <div class="deck-node light">Синтез<br>диплом</div>
+              </div>
+              <ul class="deck-bullets" style="margin-top:12px">
+                <li>DR-A ≠ DR-B · S2 ≠ V1 · mockups = concept front</li>
+              </ul>
+            </div>
+            <div class="deck-foot">Слайд 3 / 13</div>
+          </div>
+        </div>
+        <div class="block block-say">
+          <div class="block-label">Сказать</div>
+          <p>«Методология — не набор картинок. DR-A отвечает “кто на рынке”, DR-B — “какие вязкости”, PGMM/ODSA — “как упакованы конкуренты и где лакуны на этикетке”. Отдельно — воронка названия DDx и concept-эскизы этапа 6.»</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- SLIDE 4 -->
+    <article class="slide-card" id="s4">
+      <div class="slide-head">
+        <div class="slide-num">4</div>
+        <div class="slide-meta"><h3>Рынок PVL (DR-A)</h3><div class="time">1:30</div></div>
+      </div>
+      <div class="slide-body">
+        <div class="block block-screen">
+          <div class="block-label">Слайд на экране · макет 16:9</div>
+          <div class="deck-frame">
+            <div class="deck-slide">
+              <div class="deck-h">Рынок PVL: ёмкость и ограничения open data</div>
+              <div class="deck-tag">Retail S2 · 2023</div>
+              <table class="deck-table">
+                <tr><th>Показатель</th><th>Значение</th><th>ID</th></tr>
+                <tr><td>Ёмкость retail PVL</td><td><strong>278 млн л · 196 млрд ₽</strong></td><td>S2-01</td></tr>
+                <tr><td>LUKOIL</td><td>18,1%</td><td>S2-01</td></tr>
+                <tr><td>Gazpromneft</td><td>10,5%</td><td>S2-01</td></tr>
+                <tr><td>Доли брендов 2024–2026</td><td class="nd">н/д</td><td>wiki/02</td></tr>
+              </table>
+            </div>
+            <div class="deck-foot">Слайд 4 / 13 · DR-A</div>
+          </div>
+        </div>
+        <div class="block block-say">
+          <div class="block-label">Сказать</div>
+          <p>«Масштаб рынка — только retail S2 за 2023 год. Лидеры mass-mid — LUKOIL и Gazpromneft. Доли 2024–2026 в open Tier-1 не согласованы — мы их не достраиваем, фиксируем как методологическое ограничение.»</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- SLIDE 5 -->
+    <article class="slide-card" id="s5">
+      <div class="slide-head">
+        <div class="slide-num">5</div>
+        <div class="slide-meta"><h3>Конкуренты и шоки 2022+</h3><div class="time">1:30</div></div>
+      </div>
+      <div class="slide-body">
+        <div class="block block-screen">
+          <div class="block-label">Слайд на экране · макет 16:9</div>
+          <div class="deck-frame">
+            <div class="deck-slide">
+              <div class="deck-h">Конкурентная среда и структурные изменения 2022+</div>
+              <div class="deck-timeline">
+                <div class="deck-step"><b>2022</b>Exit Shell, Exxon, Total, Castrol</div>
+                <div class="deck-step"><b>2023–24</b>Brand persistence · parallel import №2701</div>
+                <div class="deck-step"><b>2025+</b>Честный ЗНАК · traceability</div>
+              </div>
+              <ul class="deck-bullets">
+                <li>Импорт 2024: 15 игроков = 71% [AS-03]</li>
+                <li>Окно для СТМ: mass-mid synthetic + official supply</li>
+              </ul>
+            </div>
+            <div class="deck-foot">Слайд 5 / 13 · DR-A</div>
+          </div>
+        </div>
+        <div class="block block-say">
+          <div class="block-label">Сказать</div>
+          <p>«После 2022 ушли официальные операторы, но бренды остаются на полке через параллельный импорт. Для СТМ это окно: mass-mid synthetic, официальная поставка и читаемая этикетка — наш вектор, не копирование импортных этикеток.»</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- SLIDE 6 -->
+    <article class="slide-card" id="s6">
+      <div class="slide-head">
+        <div class="slide-num">6</div>
+        <div class="slide-meta"><h3>SAE и продуктовая логика (DR-B)</h3><div class="time">1:30</div></div>
+      </div>
+      <div class="slide-body">
+        <div class="block block-screen">
+          <div class="block-label">Слайд на экране · макет 16:9</div>
+          <div class="deck-frame">
+            <div class="deck-slide">
+              <div class="deck-h">Спрос по SAE и логика продуктовой архитектуры</div>
+              <div class="deck-tag">BX-02 / NI-PDF · federal proxy</div>
+              <div class="deck-sae">
+                <div class="deck-sae-box core">
+                  <span>Mass core</span>
+                  <span class="pct">5W-30 35%</span>
+                  <span class="pct">5W-40 32%</span>
+                </div>
+                <div class="deck-sae-box growth">
+                  <span>Growth</span>
+                  <span class="pct" style="font-size:16px;color:#3b82f6">0W-20 +10,1% л</span>
+                  <span style="font-size:9px">10W-40 legacy · ЮФО 49%</span>
+                </div>
+              </div>
+            </div>
+            <div class="deck-foot">Слайд 6 / 13 · DR-B</div>
+          </div>
+        </div>
+        <div class="block block-say">
+          <div class="block-label">Сказать</div>
+          <p>«По SAE ядро — 5W-30 и 5W-40. 5W-30 лидирует по объёму. Якорь нашего упаковочного аудита — mass-mid 5W-40 Classic Protect. Коммерческий запуск по Roadmap — не один SKU: первая волна включает 5W-40 и 5W-30.»</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- SLIDE 7 - KEY -->
+    <article class="slide-card" id="s7" style="border:2px solid var(--accent)">
+      <div class="slide-head" style="background:var(--accent-bg)">
+        <div class="slide-num" style="background:var(--accent)">7</div>
+        <div class="slide-meta"><h3>Архитектура + Roadmap · ключевой слайд</h3><div class="time">1:00</div></div>
+      </div>
+      <div class="slide-body">
+        <div class="block block-screen">
+          <div class="block-label">Слайд на экране · макет 16:9</div>
+          <div class="deck-frame">
+            <div class="deck-slide">
+              <div class="deck-h">Архитектура линейки Eliten и волны запуска</div>
+              <div class="deck-waves">
+                <div class="deck-wave"><strong>В1</strong>5W-40 volume<br>+ 5W-30 core</div>
+                <div class="deck-wave w2"><strong>В2</strong>0W-20 FS<br>5L + 1L</div>
+                <div class="deck-wave w3"><strong>В3</strong>10W-40<br>ЮФО tactical</div>
+              </div>
+              <div style="margin-top:8px;display:flex;gap:6px;font-size:8px">
+                <span style="padding:4px 8px;background:#dcfce7;border-radius:4px">Ф1 ✅</span>
+                <span style="padding:4px 8px;background:#dcfce7;border-radius:4px">Ф2 ✅ Torzhok · 8/8</span>
+                <span style="padding:4px 8px;background:#fef3c7;border-radius:4px">Ф3 ⬜</span>
+              </div>
+              <div style="margin-top:8px;font-size:9px;padding:8px;background:#e8f3f0;border-radius:4px;border-left:3px solid #2e7d6e">
+                <strong>PGMM anchor:</strong> CP 5W-40 4L · <strong>Ф2:</strong> LUKOIL Торжок · base oil · front 8/8
+              </div>
+            </div>
+            <div class="deck-foot">Слайд 7 / 13 · ключевой</div>
+          </div>
+        </div>
+        <div class="block block-say">
+          <div class="block-label">Сказать · обязательно все три термина</div>
+          <p>«Архитектура: Classic Protect + Modern Tech, 4 SKU, 8 форматов.</p>
+          <p>Коммерческий запуск — три волны: 5W-40+5W-30, затем 0W-20, затем 10W-40 ЮФО.</p>
+          <p>Фаза 2 Roadmap закрыта: ориентир — завод ЛУКОИЛ в Торжке, бывший Shell; своя база и базовое масло. Front 8/8 и матрица фасовки утверждены.</p>
+          <p>Classic Protect 5W-40 4L — якорь исследования PGMM. Фаза 3 — маркетинг, за рамками диплома.»</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- SLIDE 8 -->
+    <article class="slide-card" id="s8">
+      <div class="slide-head">
+        <div class="slide-num">8</div>
+        <div class="slide-meta"><h3>Паттерны полки 5W-40</h3><div class="time">1:00</div></div>
+      </div>
+      <div class="slide-body">
+        <div class="block block-screen">
+          <div class="block-label">Слайд на экране · макет 16:9</div>
+          <div class="deck-frame">
+            <div class="deck-slide">
+              <div class="deck-h">Конкурентная упаковка mass-mid 5W-40</div>
+              <div class="deck-comp">
+                <div class="deck-comp-item luk">LUKOIL LUXE 4L</div>
+                <div class="deck-comp-item gpn">GPN Premium N 4L</div>
+                <div class="deck-comp-item mob">Mobil Super 3000</div>
+              </div>
+              <ul class="deck-bullets">
+                <li>PGMM: «броня/металл» &gt; fluid · hyper-armor</li>
+                <li>API/OEM часто off-front · 1L ≠ 4L claims</li>
+                <li>Mobil = parallel import · EN-facing</li>
+              </ul>
+            </div>
+            <div class="deck-foot">Слайд 8 / 13 · полка, не white space</div>
+          </div>
+        </div>
+        <div class="block block-say">
+          <div class="block-label">Сказать</div>
+          <p>«На полке mass-mid 5W-40 доминирует риторика защиты и “брони”, а не читаемая инженерная spec. Мы это фиксируем как паттерн — и строим antidote, не копию LUKOIL.»</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- SLIDE 9 -->
+    <article class="slide-card" id="s9">
+      <div class="slide-head">
+        <div class="slide-num">9</div>
+        <div class="slide-meta"><h3>Eliten · имя и ТЗ</h3><div class="time">1:00</div></div>
+      </div>
+      <div class="slide-body">
+        <div class="block block-screen">
+          <div class="block-label">Слайд на экране · макет 16:9</div>
+          <div class="deck-frame">
+            <div class="deck-slide">
+              <div class="deck-h">Eliten: выбор имени, DDx и товарный знак</div>
+              <table class="deck-ddx">
+                <tr><th>Кандидат</th><th>Funnel</th><th>Статус</th></tr>
+                <tr class="pick"><td>Eliten</td><td>3.9</td><td>RECOMMEND</td></tr>
+                <tr><td>Verum</td><td>4.3</td><td>contrastive</td></tr>
+                <tr><td>Calibr</td><td>3.8</td><td>contrastive</td></tr>
+              </table>
+              <div class="deck-fips">FIPS · ТЗ <strong>RU 1172689</strong> · кл. 04 · 03.12.2025–08.09.2035<br><span style="opacity:.8">Регистрация ТЗ ≠ launch clearance</span></div>
+            </div>
+            <div class="deck-foot">Слайд 9 / 13 · этап 5</div>
+          </div>
+        </div>
+        <div class="block block-say">
+          <div class="block-label">Сказать</div>
+          <p>«Eliten выбран как инженерная readable-марка, не luxury “elite”. Verum и Calibr — contrastive alternatives в воронке. Товарный знак зарегистрирован — RU 1172689. Регистрация знака и разрешение на продажу — разные треки: нужны TDS, маркировка, back label.»</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- SLIDE 10 -->
+    <article class="slide-card" id="s10">
+      <div class="slide-head">
+        <div class="slide-num">10</div>
+        <div class="slide-meta"><h3>White space A–F</h3><div class="time">1:00</div></div>
+      </div>
+      <div class="slide-body">
+        <div class="block block-screen">
+          <div class="block-label">Слайд на экране · макет 16:9</div>
+          <div class="deck-frame">
+            <div class="deck-slide">
+              <div class="deck-h">White space PGMM/ODSA · Classic Protect 5W-40</div>
+              <div class="deck-ws">
+                <div class="deck-ws-cell"><span>A</span>Readable OEM + API on front</div>
+                <div class="deck-ws-cell"><span>C</span>Fair 1L brief · format parity</div>
+                <div class="deck-ws-cell"><span>D</span>Antidote armor → spec band</div>
+                <div class="deck-ws-cell"><span>E</span>Official RF supply</div>
+                <div class="deck-ws-cell"><span>F</span>Cyrillic trust on back</div>
+                <div class="deck-ws-cell"><span>≠</span>Artifact ≠ canonical SKU</div>
+              </div>
+            </div>
+            <div class="deck-foot">Слайд 10 / 13 · gap §6</div>
+          </div>
+        </div>
+        <div class="block block-say">
+          <div class="block-label">Сказать</div>
+          <p>«White space — не “мы лучше всех”, а шесть конкретных лакун на полке: читаемые claims на фронте, честный 1L, визуальный antidote “брони”, официальная поставка. Это проектное решение из gap-анализа матрицы 5W-40.»</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- SLIDE 11 - VISUAL PEAK -->
+    <article class="slide-card" id="s11" style="border:2px solid var(--accent)">
+      <div class="slide-head" style="background:var(--accent-bg)">
+        <div class="slide-num" style="background:var(--accent)">11</div>
+        <div class="slide-meta"><h3>8 mockups · визуальный пик презентации</h3><div class="time">1:15 · +15 сек к репетиции</div></div>
+      </div>
+      <div class="slide-body">
+        <div class="block block-screen">
+          <div class="block-label">Слайд на экране · макет 16:9 · реальные mockups rev.2</div>
+          <div class="deck-frame tall">
+            <div class="deck-slide" style="padding:3% 4%">
+              <div class="deck-h sm">Concept front mockups rev.2 · 8/8 · unified HDPE</div>
+              <div class="deck-mockup-panel">
+                <div class="deck-mockup-head classic">Classic Protect</div>
+                <div class="deck-mockup-row">
+                  <div class="f4l"><img src="../../05_визуальные_эскизы/финал/ELITEN Classic Protect 5W-40 4l rev 2.png" alt="CP 5W-40 4L"><div class="deck-mockup-lbl">5W-40 · 4L</div></div>
+                  <div class="f1l"><img src="../../05_визуальные_эскизы/финал/ELITEN Classic Protect 5W-40 1l rev 2.png" alt="CP 5W-40 1L"><div class="deck-mockup-lbl">1L</div></div>
+                  <div class="f4l"><img src="../../05_визуальные_эскизы/финал/ELITEN Classic Protect 10W-40 4l rev 2.png" alt="CP 10W-40 4L"><div class="deck-mockup-lbl">10W-40 · 4L</div></div>
+                  <div class="f1l"><img src="../../05_визуальные_эскизы/финал/ELITEN Classic Protect 10W-40 1l rev 2.png" alt="CP 10W-40 1L"><div class="deck-mockup-lbl">1L</div></div>
+                </div>
+              </div>
+              <div class="deck-mockup-panel">
+                <div class="deck-mockup-head modern">Modern Tech</div>
+                <div class="deck-mockup-row">
+                  <div class="f4l"><img src="../../05_визуальные_эскизы/финал/ELITEN Modern Tech 5W-30 4l rev 2.png" alt="MT 5W-30 4L"><div class="deck-mockup-lbl">5W-30 · 4L</div></div>
+                  <div class="f1l"><img src="../../05_визуальные_эскизы/финал/ELITEN Modern Tech 5W-30 1l rev 2.png" alt="MT 5W-30 1L"><div class="deck-mockup-lbl">1L</div></div>
+                  <div class="f5l"><img src="../../05_визуальные_эскизы/финал/ELITEN Modern Tech 0W-20 5l rev 2.png" alt="MT 0W-20 5L"><div class="deck-mockup-lbl">0W-20 · 5L ↑</div></div>
+                  <div class="f1l"><img src="../../05_визуальные_эскизы/финал/ELITEN Modern Tech 0W-20 1l rev 2.png" alt="MT 0W-20 1L"><div class="deck-mockup-lbl">1L</div></div>
+                </div>
+              </div>
+              <div style="font-size:8px;color:#64748b;margin-top:6px;text-align:center;font-style:italic">Concept front mockups · ART-001 · not final production labels</div>
+            </div>
+            <div class="deck-foot">Слайд 11 / 13 · визуальный пик</div>
+          </div>
+        </div>
+        <div class="block block-say">
+          <div class="block-label">Сказать</div>
+          <p>«Главный визуальный результат этапа 6 — восемь concept front mockups в едином HDPE-стиле. Classic Protect — navy/silver, Modern Tech — tech-blue grid.</p>
+          <p>Изначально по дедлайну планировали только 5W-40 4L и 1L — проработали всю матрицу для design system.</p>
+          <p>0W-20 — формат 5L визуально крупнее под сервисную заливку около 5,6 литра. Это concept front ART-001, оборотная сторона и TDS — следующий этап.»</p>
+        </div>
+        <div class="block block-stop">
+          <div class="block-label">Не говорить</div>
+          <p>«Готовый продукт на полке завтра» · «все OEM на этикетке уже согласованы».</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- SLIDE 12 -->
+    <article class="slide-card" id="s12">
+      <div class="slide-head">
+        <div class="slide-num">12</div>
+        <div class="slide-meta"><h3>Нормативка + validation roadmap</h3><div class="time">1:30</div></div>
+      </div>
+      <div class="slide-body">
+        <div class="block block-screen">
+          <div class="block-label">Слайд на экране · макет 16:9</div>
+          <div class="deck-frame">
+            <div class="deck-slide">
+              <div class="deck-h">Маркировка РФ/ЕАЭС и roadmap валидации</div>
+              <div class="deck-ribbon">
+                <span>Ф1 ✅</span><em>→</em><span>Ф2 ✅ Torzhok · 8/8</span><em>→</em><span>TDS</span><em>→</em><span>compliance</span><em>→</em><span>В1</span><em>→</em><span>В2</span><em>→</em><span>В3</span><em>→</em><span style="opacity:.7">Ф3 ⬜</span>
+              </div>
+              <ul class="deck-bullets" style="margin-top:12px">
+                <li>ТР ТС 030/2012 · Честный ЗНАК с 2025 [MK-04]</li>
+                <li>Ф2: LUKOIL Торжок — orientir, не контракт</li>
+                <li>Ф3 маркетинг — next steps · outside thesis</li>
+              </ul>
+            </div>
+            <div class="deck-foot">Слайд 12 / 13</div>
+          </div>
+        </div>
+        <div class="block block-say">
+          <div class="block-label">Сказать</div>
+          <p>«Нормативка — декларирование, Честный ЗНАК, parallel import. FIPS — только знак.</p>
+          <p>Roadmap: фазы 1–2 закрыты — архитектура, Торжок, front 8/8. Дальше TDS и compliance, затем три коммерческие волны. Фаза 3 — маркетинг и цены, outside thesis.»</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- SLIDE 13 -->
+    <article class="slide-card" id="s13">
+      <div class="slide-head">
+        <div class="slide-num">13</div>
+        <div class="slide-meta"><h3>Ограничения и вклад · финал</h3><div class="time">1:30</div></div>
+      </div>
+      <div class="slide-body">
+        <div class="block block-screen">
+          <div class="block-label">Слайд на экране · макет 16:9</div>
+          <div class="deck-frame">
+            <div class="deck-slide">
+              <div class="deck-h">Ограничения исследования и вклад работы</div>
+              <div class="deck-split">
+                <div class="limit">
+                  <h4>Ограничения</h4>
+                  <ul>
+                    <li>Доли брендов 2024–26 — н/д</li>
+                    <li>DR-B: SAE federal proxy</li>
+                    <li>PGMM: retail photos · @1.2m не измерено</li>
+                    <li>Mockups: ART-001 · back TBD</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>Вклад</h4>
+                  <ul>
+                    <li>Метод DR+PGMM+ODSA+DDx</li>
+                    <li>Концепция Eliten + ТЗ RU 1172689</li>
+                    <li>Ф2: LUKOIL Торжок + front 8/8</li>
+                    <li>Roadmap 3 волны · Ф3 next</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="deck-foot">Слайд 13 / 13 · финал</div>
+          </div>
+        </div>
+        <div class="block block-say">
+          <div class="block-label">Сказать · закрытие</div>
+          <p>«Ограничения openly: н/д 2024–26, SAE proxy, mockups ART-001, back TBD, Torzhok — orientir без контракта.</p>
+          <p>Вклад: методология, Eliten + ТЗ, Ф2 Torzhok + 8 mockups, Roadmap 3 волны. Ф3 — next steps. Спасибо, готов к вопросам.»</p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section>
+    <div class="result-box">
+      <h2>Что комиссия должна унести с защиты</h2>
+      <ul>
+        <li>Вы провели структурированное исследование рынка PVL и SAE с явными ограничениями данных</li>
+        <li>Вы нашли конкретный white space на полке mass-mid 5W-40 и перевели его в дизайн-решение</li>
+        <li>Вы обосновали имя Eliten, зарегистрировали ТЗ и показали concept-линейку 8 SKU</li>
+        <li>Фаза 2 закрыта: ориентир LUKOIL Торжок + front 8/8 + фасовка</li>
+        <li>Фаза 3 и коммерческий launch — next steps после TDS/compliance</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Если спросят на Q&amp;A</h2>
+    <details class="qa"><summary>Почему данные только 2023?</summary><p>Open Tier-1 не даёт согласованный ряд 2024–2026. Фиксируем н/д, не интерполируем.</p></details>
+    <details class="qa"><summary>Запуск только 5W-40?</summary><p>Нет. PGMM-якорь — 5W-40. Запуск волна 1: 5W-40 + 5W-30.</p></details>
+    <details class="qa"><summary>Почему 8 mockups, если планировали два?</summary><p>Дедлайн → min 2 эскиза. Факт: полная design-system матрица. Roadmap не менялся.</p></details>
+    <details class="qa"><summary>FIPS — можно продавать?</summary><p>Нет. RU 1172689 = регистрация знака. Продажа = декларирование + ЧЗ + TDS.</p></details>
+    <details class="qa"><summary>Mockup — готовый продукт?</summary><p>Concept front ART-001. Back label и specs — TBD, требуют проверки.</p></details>
+    <details class="qa"><summary>Почему LUKOIL Торжок, если LUKOIL — конкурент?</summary><p>Оценка блендеров по RBS-ТЗ. Торжок — ex-Shell, своя база и базовое масло. Производственный gate Ф2, не канал продаж.</p></details>
+  </section>
+</div>
+
+<footer>
+  Сценарий + макеты слайдов по P7_deck-spec_FINAL.md · Слайд 11 — реальные PNG из 05_…/финал/
+</footer>
+
+</body>
+</html>

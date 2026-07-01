@@ -8,3 +8,8 @@
 # Python venv (локально)
 venv/
 **/venv/
+
+# P7: тяжёлые локальные черновики (канон защиты — Genspark final в git)
+06_синтез_и_текст_диплома/презентация_защиты/ELITEN_defense_draft_v5.pptx
+06_синтез_и_текст_диплома/презентация_защиты/ELITEN_defense_draft_v6.pptx
+06_синтез_и_текст_диплома/презентация_защиты/ELITEN_defense_draft_v6.pptx.bak

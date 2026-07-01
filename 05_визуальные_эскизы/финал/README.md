@@ -16,7 +16,7 @@
 | [`ELITEN Classic Protect 10W-40 1l rev 2.png`](ELITEN%20Classic%20Protect%2010W-40%201l%20rev%202.png) | Classic Protect | 10W-40 semi | 1L | Semi-Synthetic |
 | [`ELITEN Modern Tech 5W-30 4l rev 2.png`](ELITEN%20Modern%20Tech%205W-30%204l%20rev%202.png) | Modern Tech | 5W-30 syn | 4L | Fully Synthetic |
 | [`ELITEN Modern Tech 5W-30 1l rev 2.png`](ELITEN%20Modern%20Tech%205W-30%201l%20rev%202.png) | Modern Tech | 5W-30 syn | 1L | Fully Synthetic |
-| [`ELITEN Modern Tech 0W-20 5l rev 2.png`](ELITEN%20Modern%20Tech%200W-20%205l%20rev%202.png) | Modern Tech | 0W-20 FS | **5L** | Fully Synthetic |
+| [`ELITEN Modern Tech 0W-20 5l rev 2.png`](ELITEN%20Modern%20Tech%200W-20%205l%20rev%202.png) | Modern Tech | 0W-20 FS | **5L** | Fully Synthetic · **service jug · taller vs 4L** |
 | [`ELITEN Modern Tech 0W-20 1l rev 2.png`](ELITEN%20Modern%20Tech%200W-20%201l%20rev%202.png) | Modern Tech | 0W-20 FS | 1L | Fully Synthetic |
 
 **Decision record (5W-40 4L concept):** [`../ELITEN_Classic_Protect_5W40_dual_handle_packaging_note.md`](../ELITEN_Classic_Protect_5W40_dual_handle_packaging_note.md)
